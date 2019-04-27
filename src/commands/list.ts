@@ -6,16 +6,16 @@ import passwordAPI from '../api/controllers'
 export default class List extends Command {
     static description = 'Print out all passwords'
 
-    static aliases = ['list', 'ls']
+    static aliases = ['list', 'ls', 'la']
 
     async run() {
         const table = new Table({
               head: [
-                chalk.blueBright('#'),
-                chalk.blueBright('Alias'),
-                chalk.blueBright('Login'),
-                chalk.blueBright('Email'),
-                chalk.blueBright('Password'),
+                chalk.blueBright.bold('#'),
+                chalk.blueBright.bold('Alias'),
+                chalk.blueBright.bold('Login'),
+                chalk.blueBright.bold('Email'),
+                chalk.blueBright.bold('Password'),
               ]
         })
         const passwords = passwordAPI.list()

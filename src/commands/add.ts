@@ -25,14 +25,10 @@ export default class Add extends Command {
         const { args, flags } = this.parse(Add)
         let { alias, login, email, password } = args
         const { length, show } = flags
-        if (!email) {
-            email = login
-        }
-
         // if user does not enter any arg
-        if (!alias) {
+        if (!login) {
             let answers: any = await inquirer.prompt([
-                { name: 'alias', type: 'input', message: 'Enter alias'},
+                { name: 'alias', type: 'input', message: 'Enter alias', default: alias || '' },
                 { name: 'login', type: 'input', message: 'Enter login', default: 'sangdth@gmail.com' },
                 { name: 'email', type: 'input', message: 'Enter email', default: (a: any) => a.login },
                 { name: 'auto', type: 'confirm', message: 'Auto generate password?', default: true },
@@ -49,7 +45,19 @@ export default class Add extends Command {
                     }
                 }
             ])
-            console.log(answers)
+            alias = answers.alias
+            email = answers.email
+            login = answers.login
+            password = answers.password
         }
+
+        if (!email) {
+            email = login
+        }
+
+        if (!password) {
+            password = randomize('aA!', 16)
+        }
+        passwordAPI.add(email, password, alias, login)
     }
 }

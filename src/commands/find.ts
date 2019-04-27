@@ -19,11 +19,11 @@ export default class Find extends Command {
         const { index, alias, email } = flags
         const table = new Table({
               head: [
-                chalk.blueBright('#'),
-                chalk.blueBright('Alias'),
-                chalk.blueBright('Login'),
-                chalk.blueBright('Email'),
-                chalk.blueBright('Password'),
+                chalk.blueBright.bold('#'),
+                chalk.blueBright.bold('Alias'),
+                chalk.blueBright.bold('Login'),
+                chalk.blueBright.bold('Email'),
+                chalk.blueBright.bold('Password'),
               ]
         })
         if (index) {
