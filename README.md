@@ -19,7 +19,7 @@ $ npm install -g @sangdth/pw
 $ pw COMMAND
 running command...
 $ pw (-v|--version|version)
-@sangdth/pw/1.0.0-beta-03 darwin-x64 node-v10.15.3
+@sangdth/pw/1.0.0-beta-05 darwin-x64 node-v10.15.3
 $ pw --help [COMMAND]
 USAGE
   $ pw COMMAND
@@ -53,7 +53,7 @@ ALIASES
   $ pw generate
 ```
 
-_See code: [src/commands/add.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-03/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-05/src/commands/add.ts)_
 
 ## `pw cp`
 
@@ -72,7 +72,7 @@ ALIASES
   $ pw copy
 ```
 
-_See code: [src/commands/cp.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-03/src/commands/cp.ts)_
+_See code: [src/commands/cp.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-05/src/commands/cp.ts)_
 
 ## `pw find`
 
@@ -92,7 +92,7 @@ ALIASES
   $ pw select
 ```
 
-_See code: [src/commands/find.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-03/src/commands/find.ts)_
+_See code: [src/commands/find.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-05/src/commands/find.ts)_
 
 ## `pw help [COMMAND]`
 
@@ -127,7 +127,7 @@ ALIASES
   $ pw la
 ```
 
-_See code: [src/commands/ls.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-03/src/commands/ls.ts)_
+_See code: [src/commands/ls.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-05/src/commands/ls.ts)_
 
 ## `pw rm`
 
@@ -148,5 +148,5 @@ ALIASES
   $ pw del
 ```
 
-_See code: [src/commands/rm.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-03/src/commands/rm.ts)_
+_See code: [src/commands/rm.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-05/src/commands/rm.ts)_
 <!-- commandsstop -->
