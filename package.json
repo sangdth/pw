@@ -1,7 +1,7 @@
 {
-  "name": "pw",
+  "name": "@sangdth/pw",
   "description": "Simple password manager",
-  "version": "0.0.0",
+  "version": "1.0.0-beta",
   "author": "Sang Dang @sangdth",
   "bin": {
     "pw": "./bin/run"
