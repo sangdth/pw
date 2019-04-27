@@ -28,11 +28,13 @@ export default class Remove extends Command {
                     chalk.blueBright.bold('Password'),
                   ]
             })
+
             const passwords = passwordAPI.findByAlias(alias)
             for (let i = 0; i < passwords.length; i++) {
                 const item = passwords[i]
                 table.push([ i, item.alias, item.login, item.email, item.password ])
             }
+
             if (passwords.length >= 2) {
                 this.log(table.toString())
                 let answers: any = await inquirer.prompt([
