@@ -1,4 +1,4 @@
-pw
+@sangdth/pw
 ==
 
 Simple password manager

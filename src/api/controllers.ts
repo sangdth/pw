@@ -18,14 +18,15 @@ class PasswordAPI {
     private passwords : Password[] = []
 
     constructor () {
+        // make folder and file for the first run
+        if (!fs.existsSync(path.dirname(pwFile))) {
+            fs.mkdirSync(path.dirname(pwFile))
+            fs.writeFileSync(pwFile, "[]", { encoding: 'utf-8' })
+        }
         this.passwords = JSON.parse(fs.readFileSync(pwFile, { encoding: 'utf-8' }))
     }
 
     private savePasswords () {
-        // make folder for the first run
-        if (!fs.existsSync(path.dirname(pwFile))) {
-          fs.mkdirSync(path.dirname(pwFile))
-        }
         const data = JSON.stringify(this.passwords)
         fs.writeFileSync(pwFile, data, { encoding: 'utf-8' })
     }
