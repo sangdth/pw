@@ -1,4 +1,4 @@
-@sangdth/pw
+pw
 ==
 
 Simple password manager
@@ -8,7 +8,11 @@ Simple password manager
 [![Downloads/week](https://img.shields.io/npm/dw/pw.svg)](https://npmjs.org/package/@sangdth/pw)
 [![License](https://img.shields.io/npm/l/pw.svg)](https://github.com/sangdth/pw/blob/master/package.json)
 
+# Warning!
+Still in beta phase, passwords are saved in raw text in json file, without any hashed or encrypted.
+
 <!-- toc -->
+* [Warning!](#warning)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -19,7 +23,7 @@ $ npm install -g @sangdth/pw
 $ pw COMMAND
 running command...
 $ pw (-v|--version|version)
-@sangdth/pw/1.0.0-beta-07 darwin-x64 node-v10.15.3
+@sangdth/pw/1.0.0-beta-08 darwin-x64 node-v10.15.3
 $ pw --help [COMMAND]
 USAGE
   $ pw COMMAND
@@ -53,7 +57,7 @@ ALIASES
   $ pw generate
 ```
 
-_See code: [src/commands/add.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-07/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-08/src/commands/add.ts)_
 
 ## `pw cp`
 
@@ -72,7 +76,7 @@ ALIASES
   $ pw copy
 ```
 
-_See code: [src/commands/cp.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-07/src/commands/cp.ts)_
+_See code: [src/commands/cp.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-08/src/commands/cp.ts)_
 
 ## `pw find`
 
@@ -92,7 +96,7 @@ ALIASES
   $ pw select
 ```
 
-_See code: [src/commands/find.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-07/src/commands/find.ts)_
+_See code: [src/commands/find.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-08/src/commands/find.ts)_
 
 ## `pw help [COMMAND]`
 
@@ -127,7 +131,7 @@ ALIASES
   $ pw la
 ```
 
-_See code: [src/commands/ls.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-07/src/commands/ls.ts)_
+_See code: [src/commands/ls.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-08/src/commands/ls.ts)_
 
 ## `pw rm`
 
@@ -148,5 +152,5 @@ ALIASES
   $ pw del
 ```
 
-_See code: [src/commands/rm.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-07/src/commands/rm.ts)_
+_See code: [src/commands/rm.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-08/src/commands/rm.ts)_
 <!-- commandsstop -->
