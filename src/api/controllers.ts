@@ -29,15 +29,20 @@ class PasswordAPI {
             fs.mkdirSync(path.dirname(pwFile))
             fs.writeFileSync(pwFile, "[]", { encoding: 'utf-8' })
         }
-        const data = JSON.parse(fs.readFileSync(pwFile, { encoding: 'utf-8' }))
-        this.passwords = data.map((o : any) => {
+
+        const passwords = JSON.parse(fs.readFileSync(pwFile, { encoding: 'utf-8' }))
+        this.passwords = passwords.map((o : any) => {
             o.password = this.decrypt(o.password)
             return o
         })
     }
 
     private savePasswords () {
-        const data = JSON.stringify(this.passwords)
+        const passwords = this.passwords.map((o : any) => {
+            o.password = this.encrypt(o.password)
+            return o
+        })
+        const data = JSON.stringify(passwords)
         fs.writeFileSync(pwFile, data, { encoding: 'utf-8' })
     }
 
@@ -60,13 +65,17 @@ class PasswordAPI {
     add (email : string, password : string, alias? : string, login? : string) {
         alias = alias  || ''
         login = login || ''
-        const used = 0
-        const created = Date.now()
         const found = this.passwords.find(o => o.alias === alias)
-        if (found) { alias += randomize('a', 3) }
-        const id = randomize('aA0', 16)
-        password = this.encrypt(password)
-        const newPassword : Password = { id, email, password, alias, login, used, created }
+        if (found) { alias += '-' + randomize('a', 3) }
+        const newPassword : Password = { 
+            id: randomize('aA0', 16),
+            email, 
+            password,
+            alias,
+            login,
+            used: 0,
+            created: Date.now()
+        }
         this.passwords.push(newPassword)
         this.savePasswords()
     }

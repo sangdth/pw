@@ -34,7 +34,8 @@ export default class Add extends Command {
                 { name: 'auto', type: 'confirm', message: 'Auto generate password?', default: true },
                 { 
                     name: 'password',
-                    type: 'input',
+                    type: 'password',
+                    mask: '*',
                     message: 'Enter password',
                     when: (a: any) => {
                         if (a.auto) {
