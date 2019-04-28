@@ -8,7 +8,9 @@ Simple password manager
 [![Downloads/week](https://img.shields.io/npm/dw/pw.svg)](https://npmjs.org/package/@sangdth/pw)
 [![License](https://img.shields.io/npm/l/pw.svg)](https://github.com/sangdth/pw/blob/master/package.json)
 
-<p align="center"><img src="https://i.imgur.com/0KrbTVD.gifv?raw=true"/></p>
+
+![Demo image](https://i.imgur.com/0KrbTVD.gifv)
+
 
 #### Warning! Use with your own risk! This is learning project, and still in development, passwords are not saved in raw text, but simple encrypted with static pass and salt. In the future I will try to make it stronger and more flexible.
 
