@@ -19,8 +19,9 @@ interface Password {
 
 class PasswordAPI {
     private passwords : Password[] = []
-    private iv = Buffer.alloc(16, 0)
-    private masterPass = 'lorem123'
+    private iv = Buffer.alloc(16, 0) // make it dynamic later
+    private masterPass = 'lorem_pass'
+    private salt = 'random_salt'
 
     constructor () {
         // make folder and file for the first run
@@ -28,7 +29,11 @@ class PasswordAPI {
             fs.mkdirSync(path.dirname(pwFile))
             fs.writeFileSync(pwFile, "[]", { encoding: 'utf-8' })
         }
-        this.passwords = JSON.parse(fs.readFileSync(pwFile, { encoding: 'utf-8' }))
+        const data = JSON.parse(fs.readFileSync(pwFile, { encoding: 'utf-8' }))
+        this.passwords = data.map((o : any) => {
+            o.password = this.decrypt(o.password)
+            return o
+        })
     }
 
     private savePasswords () {
@@ -37,49 +42,19 @@ class PasswordAPI {
     }
 
     private encrypt (pass : string) {
-        const key = crypto.scryptSync(this.masterPass, 'salt', 24)
+        const key = crypto.scryptSync(this.masterPass, this.salt, 24)
         const cipher = crypto.createCipheriv('aes192', key, this.iv)
-
-        let encrypted = ''
-
-        cipher.on('readable', () => {
-            let chunk
-            while (null !== (chunk = cipher.read())) {
-                encrypted += chunk.toString('hex');
-            }
-        })
-
-        cipher.write(pass);
-        cipher.end();
-
-        cipher.on('end', () => {
-            pass = encrypted
-            // console.log(typeof encrypted, encrypted);
-        });
-
-        // return encrypted
+        let encrypted = cipher.update(pass, 'utf8', 'hex')
+        encrypted += cipher.final('hex');
+        return encrypted
     }
 
     private decrypt (encryptedPass : string) {
-        const key = crypto.scryptSync(this.masterPass, 'salt', 24)
+        const key = crypto.scryptSync(this.masterPass, this.salt, 24)
         const decipher = crypto.createDecipheriv('aes192', key, this.iv)
-
-        let decrypted = ''
-
-        decipher.on('readable', () => {
-            let chunk
-            while (null !== (chunk = decipher.read())) {
-                decrypted += chunk.toString('utf8');
-            }
-        })
-
-        decipher.on('end', () => {
-            // console.log(decrypted);
-        });
-
-        // Encrypted with same algorithm, key and iv.
-        decipher.write(encryptedPass, 'hex');
-        decipher.end();
+        let decrypted = decipher.update(encryptedPass, 'hex', 'utf8');
+        decrypted += decipher.final('utf8');
+        return decrypted
     }
 
     add (email : string, password : string, alias? : string, login? : string) {
@@ -90,18 +65,18 @@ class PasswordAPI {
         const found = this.passwords.find(o => o.alias === alias)
         if (found) { alias += randomize('a', 3) }
         const id = randomize('aA0', 16)
+        password = this.encrypt(password)
         const newPassword : Password = { id, email, password, alias, login, used, created }
-        const encrypted = this.encrypt(password)
-        // const decrypted = this.decrypt(encrypted)
-
-        console.log('test enccrypt: ', password, encrypted)
-
         this.passwords.push(newPassword)
         this.savePasswords()
     }
 
     list () {
         return this.passwords
+    }
+
+    findByIndex(index : number) {
+        return this.passwords[index]
     }
 
     findById (id : string) {

@@ -26,6 +26,7 @@ export default class Find extends Command {
                 chalk.blueBright.bold('Password'),
               ]
         })
+        const passwords = passwordAPI.list()
         if (index) {
             const found = passwordAPI.findByIndex(parseInt(index, 10))
             table.push([0, found.alias, found.login, found.email, found.password])

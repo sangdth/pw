@@ -56,7 +56,8 @@ export default class Copy extends Command {
         }
 
         if (index) {
-            const found = passwordAPI.findByIndex(parseInt(index, 10))
+            const passwords = passwordAPI.list()
+            const found = passwords[parseInt(index, 10)]
             clipboardy.writeSync(found.password)
             this.log(`Copied ${chalk.green(found.alias)} into clipboard!`)
         }
