@@ -3,12 +3,12 @@ pw
 
 Simple password manager
 
-#### Warning: Still in development, passwords are saved in raw text.
-
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/pw.svg)](https://npmjs.org/package/@sangdth/pw)
 [![Downloads/week](https://img.shields.io/npm/dw/pw.svg)](https://npmjs.org/package/@sangdth/pw)
 [![License](https://img.shields.io/npm/l/pw.svg)](https://github.com/sangdth/pw/blob/master/package.json)
+
+#### Warning! Use with your own risk! This is learning project, and still in development, passwords are not saved in raw text, but simple encrypted with static pass and salt. In the future I will try to make it stronger and more flexible.
 
 <!-- toc -->
 * [Usage](#usage)
