@@ -10,6 +10,7 @@ declare class PasswordAPI {
     private passwords;
     constructor();
     private savePasswords;
+    private encrypt;
     add(email: string, password: string, alias?: string, login?: string): void;
     list(): Password[];
     findByIndex(index: number): Password;

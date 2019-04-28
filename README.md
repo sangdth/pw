@@ -2,7 +2,8 @@ pw
 ==
 
 Simple password manager
-Warning: Still in development, passwords are saved in raw text.
+
+#### Warning: Still in development, passwords are saved in raw text.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/pw.svg)](https://npmjs.org/package/@sangdth/pw)

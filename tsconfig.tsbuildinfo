@@ -210,8 +210,8 @@
         "signature": "04b2123e996b5c865eec449a1c670c10cee24d12b9f1a97979c0dbbceecc3384"
       },
       "/users/sangdth/projects/pw/src/api/controllers.ts": {
-        "version": "5ee07ebb46db5459d1513d5fc1ff40c39cc932d935f749e866967d203617ee93",
-        "signature": "8c925daf50920fd2abaa20cbd84fbf73b65165890e17338e403d747b2ec985c3"
+        "version": "e501041684bba4f2bf8f6ecdf87e28e701b523a2d09e8507a8c87a7b350bd2f4",
+        "signature": "a59dfaa26350cdc9943ad12fc1460a0f62207610d9b52fc08cd9e19f64b8d819"
       },
       "/users/sangdth/projects/pw/node_modules/chalk/types/index.d.ts": {
         "version": "091f417275a51ab3c47b949723e9e8a193012157ecc64a96e2d7b1505e82f395",
@@ -815,6 +815,7 @@
         "/users/sangdth/projects/pw/node_modules/@types/node/fs.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/path.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/os.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/crypto.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1445,6 +1446,130 @@
       ]
     },
     "exportedModulesMap": {
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es5.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.dom.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.scripthost.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.full.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/sangdth/projects/pw/node_modules/tslib/tslib.d.ts": [
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2170,130 +2295,6 @@
       "/users/sangdth/projects/pw/node_modules/@types/sinon/ts3.1/index.d.ts": [
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es5.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2016.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.dom.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.dom.iterable.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.webworker.importscripts.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.scripthost.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.core.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.object.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.string.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/typescript/lib/lib.es2017.full.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -2349,7 +2350,6 @@
       "/users/sangdth/projects/pw/node_modules/@oclif/command/lib/main.d.ts",
       "/users/sangdth/projects/pw/node_modules/@oclif/command/lib/index.d.ts",
       "/users/sangdth/projects/pw/src/index.ts",
-      "/users/sangdth/projects/pw/src/api/controllers.ts",
       "/users/sangdth/projects/pw/node_modules/chalk/types/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
@@ -2410,11 +2410,6 @@
       "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/through/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/inquirer/index.d.ts",
-      "/users/sangdth/projects/pw/src/commands/add.ts",
-      "/users/sangdth/projects/pw/src/commands/cp.ts",
-      "/users/sangdth/projects/pw/src/commands/find.ts",
-      "/users/sangdth/projects/pw/src/commands/ls.ts",
-      "/users/sangdth/projects/pw/src/commands/rm.ts",
       "/users/sangdth/projects/pw/node_modules/@types/chai/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/cli-table/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/lodash/common/common.d.ts",
@@ -2432,7 +2427,13 @@
       "/users/sangdth/projects/pw/node_modules/@types/lodash/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/mocha/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/nock/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/sinon/ts3.1/index.d.ts"
+      "/users/sangdth/projects/pw/node_modules/@types/sinon/ts3.1/index.d.ts",
+      "/users/sangdth/projects/pw/src/api/controllers.ts",
+      "/users/sangdth/projects/pw/src/commands/add.ts",
+      "/users/sangdth/projects/pw/src/commands/cp.ts",
+      "/users/sangdth/projects/pw/src/commands/find.ts",
+      "/users/sangdth/projects/pw/src/commands/ls.ts",
+      "/users/sangdth/projects/pw/src/commands/rm.ts"
     ]
   },
   "version": "3.4.5"

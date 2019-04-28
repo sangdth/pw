@@ -18,6 +18,28 @@ export default class Remove extends Command {
     async run() {
         const { flags } = this.parse(Remove)
         let { index, alias, email } = flags
+
+        if (index) {
+            const arr = index.split(',')
+            if (arr.length >= 1) {
+                let answers: any = await inquirer.prompt([{
+                    type: 'confirm',
+                    name: 'confirm',
+                    message: (a: any) => 'Permanently delete those indexes. Are you sure?',
+                    default: false
+                }])
+
+                if (answers.confirm) {
+                    const passwords = passwordAPI.list()
+                    const ids = arr.map((i : any) => passwords[i].id)
+                    for (let i = 0; i < ids.length; i++) {
+                        passwordAPI.removeById(ids[i])
+                    }
+                    this.log('Deleted successful!')
+                }
+            }
+        }
+
         if (alias) {
             const table = new Table({
                   head: [
