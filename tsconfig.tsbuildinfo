@@ -2412,6 +2412,8 @@
       "/users/sangdth/projects/pw/node_modules/@types/through/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/inquirer/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/chalk/types/index.d.ts",
+      "/users/sangdth/projects/pw/src/api/controllers.ts",
+      "/users/sangdth/projects/pw/src/commands/add.ts",
       "/users/sangdth/projects/pw/src/commands/cp.ts",
       "/users/sangdth/projects/pw/src/commands/find.ts",
       "/users/sangdth/projects/pw/src/commands/ls.ts",
@@ -2433,9 +2435,7 @@
       "/users/sangdth/projects/pw/node_modules/@types/lodash/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/mocha/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/nock/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/sinon/ts3.1/index.d.ts",
-      "/users/sangdth/projects/pw/src/api/controllers.ts",
-      "/users/sangdth/projects/pw/src/commands/add.ts"
+      "/users/sangdth/projects/pw/node_modules/@types/sinon/ts3.1/index.d.ts"
     ]
   },
   "version": "3.4.5"
