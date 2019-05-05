@@ -5,7 +5,6 @@ export default class Copy extends Command {
     static flags: {
         index: flags.IOptionFlag<string | undefined>;
         alias: flags.IOptionFlag<string | undefined>;
-        email: flags.IOptionFlag<string | undefined>;
     };
     run(): Promise<void>;
 }

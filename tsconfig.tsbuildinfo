@@ -209,58 +209,6 @@
         "version": "37b0cf2713d8c6a145ad7c76ceb1985af28a0261b72b93a575d5a5dd85701261",
         "signature": "04b2123e996b5c865eec449a1c670c10cee24d12b9f1a97979c0dbbceecc3384"
       },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts": {
-        "version": "1bde27f1326fc466565a2af68159898d7876c6f174d6e3530506d26bbd6c39e0",
-        "signature": "1bde27f1326fc466565a2af68159898d7876c6f174d6e3530506d26bbd6c39e0"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts": {
-        "version": "17fb98ca0b4192e23c7a3a75c27f444b320698bb7cf8b4718a583c8bcb1db55b",
-        "signature": "17fb98ca0b4192e23c7a3a75c27f444b320698bb7cf8b4718a583c8bcb1db55b"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts": {
-        "version": "883c26d28d95dc115cf6512d123140fb46a48bbc720112c4962cb1da98a69e47",
-        "signature": "883c26d28d95dc115cf6512d123140fb46a48bbc720112c4962cb1da98a69e47"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts": {
-        "version": "9e1bc72a9b1f69e8b4c0e53a4ea194287f8c1a09081159428be0f48be5b89701",
-        "signature": "9e1bc72a9b1f69e8b4c0e53a4ea194287f8c1a09081159428be0f48be5b89701"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts": {
-        "version": "35cc96c3135e7b9bea0ae8d50208ccaf657e592d129520e24016e18235beb190",
-        "signature": "35cc96c3135e7b9bea0ae8d50208ccaf657e592d129520e24016e18235beb190"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts": {
-        "version": "cba4d98170a463ded95b38f3399e4cd966c880566933977df14597b2fecd490b",
-        "signature": "cba4d98170a463ded95b38f3399e4cd966c880566933977df14597b2fecd490b"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts": {
-        "version": "14da6d3ffe262a3bd860784f9405c597013c129f8c8c74d3bb4c6984e553d376",
-        "signature": "14da6d3ffe262a3bd860784f9405c597013c129f8c8c74d3bb4c6984e553d376"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts": {
-        "version": "0ad5d8815e5a5c2e3ab415aa4b1b984c8ca7de1499cb4b00516bf5743cf0cb19",
-        "signature": "0ad5d8815e5a5c2e3ab415aa4b1b984c8ca7de1499cb4b00516bf5743cf0cb19"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts": {
-        "version": "b190690576981ed1aac38f35c7767ddf002b68dd402e676efbb68f45ed40707f",
-        "signature": "b190690576981ed1aac38f35c7767ddf002b68dd402e676efbb68f45ed40707f"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts": {
-        "version": "b0ab8cf507aa5abc270cc552795c07c1b21e1b7f6502864cf55c8774db0cd656",
-        "signature": "b0ab8cf507aa5abc270cc552795c07c1b21e1b7f6502864cf55c8774db0cd656"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts": {
-        "version": "cb1381e63669f8cb6161ae92846c5ec2e50784b5e650eb00511c0e32b3c6597e",
-        "signature": "cb1381e63669f8cb6161ae92846c5ec2e50784b5e650eb00511c0e32b3c6597e"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts": {
-        "version": "56ba33cd6a832fd7519f34c0f577d101cdfd191844494bfa4348b1fd9e3444a6",
-        "signature": "56ba33cd6a832fd7519f34c0f577d101cdfd191844494bfa4348b1fd9e3444a6"
-      },
-      "/users/sangdth/projects/pw/node_modules/@types/rx/index.d.ts": {
-        "version": "4bc2ca7e398daba1b2ed5544abf74f2913821a6dfe66c67f1c70ed79b5c51e79",
-        "signature": "4bc2ca7e398daba1b2ed5544abf74f2913821a6dfe66c67f1c70ed79b5c51e79"
-      },
       "/users/sangdth/projects/pw/node_modules/@types/node/globals.d.ts": {
         "version": "1bba2fc2e58c0340b92eeb9185be6e75e27d52f10a315aa65810a19b3277f1c7",
         "signature": "1bba2fc2e58c0340b92eeb9185be6e75e27d52f10a315aa65810a19b3277f1c7"
@@ -437,6 +385,62 @@
         "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
         "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
       },
+      "/users/sangdth/projects/pw/node_modules/@types/fs-extra/index.d.ts": {
+        "version": "a609600956f9652b488fe0cd3687deed05ee276a3d6a76000386add895ec9450",
+        "signature": "a609600956f9652b488fe0cd3687deed05ee276a3d6a76000386add895ec9450"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts": {
+        "version": "1bde27f1326fc466565a2af68159898d7876c6f174d6e3530506d26bbd6c39e0",
+        "signature": "1bde27f1326fc466565a2af68159898d7876c6f174d6e3530506d26bbd6c39e0"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts": {
+        "version": "17fb98ca0b4192e23c7a3a75c27f444b320698bb7cf8b4718a583c8bcb1db55b",
+        "signature": "17fb98ca0b4192e23c7a3a75c27f444b320698bb7cf8b4718a583c8bcb1db55b"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts": {
+        "version": "883c26d28d95dc115cf6512d123140fb46a48bbc720112c4962cb1da98a69e47",
+        "signature": "883c26d28d95dc115cf6512d123140fb46a48bbc720112c4962cb1da98a69e47"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts": {
+        "version": "9e1bc72a9b1f69e8b4c0e53a4ea194287f8c1a09081159428be0f48be5b89701",
+        "signature": "9e1bc72a9b1f69e8b4c0e53a4ea194287f8c1a09081159428be0f48be5b89701"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts": {
+        "version": "35cc96c3135e7b9bea0ae8d50208ccaf657e592d129520e24016e18235beb190",
+        "signature": "35cc96c3135e7b9bea0ae8d50208ccaf657e592d129520e24016e18235beb190"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts": {
+        "version": "cba4d98170a463ded95b38f3399e4cd966c880566933977df14597b2fecd490b",
+        "signature": "cba4d98170a463ded95b38f3399e4cd966c880566933977df14597b2fecd490b"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts": {
+        "version": "14da6d3ffe262a3bd860784f9405c597013c129f8c8c74d3bb4c6984e553d376",
+        "signature": "14da6d3ffe262a3bd860784f9405c597013c129f8c8c74d3bb4c6984e553d376"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts": {
+        "version": "0ad5d8815e5a5c2e3ab415aa4b1b984c8ca7de1499cb4b00516bf5743cf0cb19",
+        "signature": "0ad5d8815e5a5c2e3ab415aa4b1b984c8ca7de1499cb4b00516bf5743cf0cb19"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts": {
+        "version": "b190690576981ed1aac38f35c7767ddf002b68dd402e676efbb68f45ed40707f",
+        "signature": "b190690576981ed1aac38f35c7767ddf002b68dd402e676efbb68f45ed40707f"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts": {
+        "version": "b0ab8cf507aa5abc270cc552795c07c1b21e1b7f6502864cf55c8774db0cd656",
+        "signature": "b0ab8cf507aa5abc270cc552795c07c1b21e1b7f6502864cf55c8774db0cd656"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts": {
+        "version": "cb1381e63669f8cb6161ae92846c5ec2e50784b5e650eb00511c0e32b3c6597e",
+        "signature": "cb1381e63669f8cb6161ae92846c5ec2e50784b5e650eb00511c0e32b3c6597e"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts": {
+        "version": "56ba33cd6a832fd7519f34c0f577d101cdfd191844494bfa4348b1fd9e3444a6",
+        "signature": "56ba33cd6a832fd7519f34c0f577d101cdfd191844494bfa4348b1fd9e3444a6"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/rx/index.d.ts": {
+        "version": "4bc2ca7e398daba1b2ed5544abf74f2913821a6dfe66c67f1c70ed79b5c51e79",
+        "signature": "4bc2ca7e398daba1b2ed5544abf74f2913821a6dfe66c67f1c70ed79b5c51e79"
+      },
       "/users/sangdth/projects/pw/node_modules/@types/through/index.d.ts": {
         "version": "2d846db276696838aaabdc3c974419d66ab9f866d19cdc869cfb6ecff6754c01",
         "signature": "2d846db276696838aaabdc3c974419d66ab9f866d19cdc869cfb6ecff6754c01"
@@ -449,20 +453,24 @@
         "version": "091f417275a51ab3c47b949723e9e8a193012157ecc64a96e2d7b1505e82f395",
         "signature": "091f417275a51ab3c47b949723e9e8a193012157ecc64a96e2d7b1505e82f395"
       },
+      "/users/sangdth/projects/pw/src/lib/util/path.ts": {
+        "version": "aba39d08266097b08c9acc6c890b9e74501272dd8f52d0308c673fbbbb84804f",
+        "signature": "2a1ae82a5eb1c6017f8f7ba3c480e82d9309d620f432745a2dc170277f4b7909"
+      },
       "/users/sangdth/projects/pw/src/api/controllers.ts": {
-        "version": "b17eaf759bbf462494753688d9b9298a12ae160a258cfaeac75b1d1bb7beb660",
-        "signature": "e6632114c3185786535270d5023bc28086e2ceacaf8d35de9c93a21d10e29a1d"
+        "version": "d38274786beb62ffc423facae3f7274c421bb30f72481d99c98f5edb35a2d683",
+        "signature": "e37b11a78dab925e40d80b2c9de58d3816756a10739f7fd3c23771640a96b71a"
       },
       "/users/sangdth/projects/pw/src/commands/add.ts": {
-        "version": "7c67eb128c7359a3bc4fef2d1a0139ae544e5211c0090e4c32e35a97b1f98c35",
+        "version": "929e395d0e70f8ab5047a5955b966cab531d4a1a2998fba2a59c679c813d9a61",
         "signature": "645fbcb69cf67c09e16b42638e0f26a01e556362fab68ea0a82ec8c851936cad"
       },
       "/users/sangdth/projects/pw/src/commands/cp.ts": {
-        "version": "78231d04121ba46624fd0c4e6b6f25c9585864dbd71637de9a16f709c158cf01",
-        "signature": "2382522aa649f6691485ae785e8d1374af751eb09f7667640363381c7ae46caf"
+        "version": "c7d55b87d665c888f6aaa8ec5eee5b70897c4a7bce51df41e190fdf633fbd3e8",
+        "signature": "f40e8805c7275a6326797d74664f928f4aa9662dccb557f293fc646d1454f6e6"
       },
       "/users/sangdth/projects/pw/src/commands/find.ts": {
-        "version": "985296160ab4467e466c77df38e724169cd69e4e63cb396654d754c865afdc1c",
+        "version": "dfc07b69f6eb0ff1f5369bd7d6eb14da5f52f696ae6cfddfc51742eab6f0a1b2",
         "signature": "315b9d817f0cafdd721facd6aa9b8de449d164ddc6458b7bbc0d750dc4fd4c76"
       },
       "/users/sangdth/projects/pw/src/commands/ls.ts": {
@@ -472,6 +480,10 @@
       "/users/sangdth/projects/pw/src/commands/rm.ts": {
         "version": "586b28d8debe2399c02fffd8d3e76698a083abd4b4306d867f43462e12ec17c3",
         "signature": "da43f6cf79b3ebaf8162337246fa8411116eb429fa7c044b7f114da70e06e384"
+      },
+      "/users/sangdth/projects/pw/src/lib/options.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "/users/sangdth/projects/pw/node_modules/@types/chai/index.d.ts": {
         "version": "c465afa89ac28f74167a2ee7c3c6eb8dd1245c2b3bdaa4704d58d35b932de4b7",
@@ -532,6 +544,14 @@
       "/users/sangdth/projects/pw/node_modules/@types/lodash/index.d.ts": {
         "version": "eaa8d56bff006bd59e748e0af3354f32a934f58db4835e0f1026e091087a49bf",
         "signature": "eaa8d56bff006bd59e748e0af3354f32a934f58db4835e0f1026e091087a49bf"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/lowdb/_lodash.d.ts": {
+        "version": "085896b70c7ef0a8e6bf68b0ef23d0c02249d3878641b4a1b61044b655363585",
+        "signature": "085896b70c7ef0a8e6bf68b0ef23d0c02249d3878641b4a1b61044b655363585"
+      },
+      "/users/sangdth/projects/pw/node_modules/@types/lowdb/index.d.ts": {
+        "version": "0cd1df734f468cad5a7d73f626ae2a287942c474c28186de2a5087920277f8b7",
+        "signature": "0cd1df734f468cad5a7d73f626ae2a287942c474c28186de2a5087920277f8b7"
       },
       "/users/sangdth/projects/pw/node_modules/@types/mocha/index.d.ts": {
         "version": "0d2394ead194f57249ac193360c6529ff4b4ec675e3499651eed6baf20867102",
@@ -811,82 +831,6 @@
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/users/sangdth/projects/pw/node_modules/@types/node/globals.d.ts": [
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
@@ -1151,6 +1095,88 @@
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/globals.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts"
       ],
+      "/users/sangdth/projects/pw/node_modules/@types/fs-extra/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/fs.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/sangdth/projects/pw/node_modules/@types/through/index.d.ts": [
         "/users/sangdth/projects/pw/node_modules/@types/node/stream.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/index.d.ts",
@@ -1167,13 +1193,21 @@
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "/users/sangdth/projects/pw/src/lib/util/path.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/fs-extra/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/os.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/path.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/sangdth/projects/pw/src/api/controllers.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/fs.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/fs-extra/index.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/path.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/os.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/crypto.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/inquirer/index.d.ts",
         "/users/sangdth/projects/pw/node_modules/chalk/types/index.d.ts",
+        "/users/sangdth/projects/pw/src/lib/util/path.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1213,6 +1247,10 @@
         "/users/sangdth/projects/pw/node_modules/chalk/types/index.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/inquirer/index.d.ts",
         "/users/sangdth/projects/pw/src/api/controllers.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/src/lib/options.ts": [
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1429,6 +1467,18 @@
         "/users/sangdth/projects/pw/node_modules/@types/lodash/common/seq.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/lodash/common/string.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/lodash/common/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/lowdb/_lodash.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/lodash/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/lowdb/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/lowdb/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/lodash/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/lowdb/_lodash.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1695,82 +1745,6 @@
       "/users/sangdth/projects/pw/src/index.ts": [
         "/users/sangdth/projects/pw/node_modules/@oclif/command/lib/index.d.ts"
       ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "/users/sangdth/projects/pw/node_modules/@types/rx/index.d.ts": [
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
-        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "/users/sangdth/projects/pw/node_modules/@types/node/globals.d.ts": [
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
@@ -2035,6 +2009,82 @@
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/globals.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts"
       ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/rx/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "/users/sangdth/projects/pw/node_modules/@types/through/index.d.ts": [
         "/users/sangdth/projects/pw/node_modules/@types/node/stream.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/index.d.ts",
@@ -2297,6 +2347,24 @@
       "/users/sangdth/projects/pw/node_modules/@types/sinon/ts3.1/index.d.ts": [
         "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
         "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/fs-extra/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/node/fs.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/lowdb/_lodash.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/lodash/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/lowdb/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "/users/sangdth/projects/pw/node_modules/@types/lowdb/index.d.ts": [
+        "/users/sangdth/projects/pw/node_modules/@types/lodash/index.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/lowdb/_lodash.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/util.d.ts",
+        "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -2352,19 +2420,6 @@
       "/users/sangdth/projects/pw/node_modules/@oclif/command/lib/main.d.ts",
       "/users/sangdth/projects/pw/node_modules/@oclif/command/lib/index.d.ts",
       "/users/sangdth/projects/pw/src/index.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/rx/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/node/globals.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/node/assert.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/node/async_hooks.d.ts",
@@ -2409,15 +2464,22 @@
       "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/util.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/globals.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/node/ts3.2/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-core/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-core-binding/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-aggregates/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-async/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-backpressure/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-coincidence/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-experimental/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-joinpatterns/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-virtualtime/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-testing/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx-lite-time/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/rx/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/through/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/inquirer/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/chalk/types/index.d.ts",
-      "/users/sangdth/projects/pw/src/api/controllers.ts",
-      "/users/sangdth/projects/pw/src/commands/add.ts",
-      "/users/sangdth/projects/pw/src/commands/cp.ts",
-      "/users/sangdth/projects/pw/src/commands/find.ts",
-      "/users/sangdth/projects/pw/src/commands/ls.ts",
-      "/users/sangdth/projects/pw/src/commands/rm.ts",
       "/users/sangdth/projects/pw/node_modules/@types/chai/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/cli-table/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/lodash/common/common.d.ts",
@@ -2435,7 +2497,18 @@
       "/users/sangdth/projects/pw/node_modules/@types/lodash/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/mocha/index.d.ts",
       "/users/sangdth/projects/pw/node_modules/@types/nock/index.d.ts",
-      "/users/sangdth/projects/pw/node_modules/@types/sinon/ts3.1/index.d.ts"
+      "/users/sangdth/projects/pw/node_modules/@types/sinon/ts3.1/index.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/fs-extra/index.d.ts",
+      "/users/sangdth/projects/pw/src/lib/util/path.ts",
+      "/users/sangdth/projects/pw/src/api/controllers.ts",
+      "/users/sangdth/projects/pw/src/commands/add.ts",
+      "/users/sangdth/projects/pw/src/commands/cp.ts",
+      "/users/sangdth/projects/pw/src/commands/find.ts",
+      "/users/sangdth/projects/pw/src/commands/ls.ts",
+      "/users/sangdth/projects/pw/src/commands/rm.ts",
+      "/users/sangdth/projects/pw/src/lib/options.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/lowdb/_lodash.d.ts",
+      "/users/sangdth/projects/pw/node_modules/@types/lowdb/index.d.ts"
     ]
   },
   "version": "3.4.5"
