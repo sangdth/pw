@@ -9,6 +9,7 @@ const randomize = require('randomatic')
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 const pwFile = getPath('db.json')
+const pwTemplate = '{ "passwords": [] }'
 
 const masterPass = 'lorem_pass'
 const iv = Buffer.alloc(16, 0) // make it dynamic later
@@ -41,17 +42,15 @@ class PasswordAPI {
         // make folder and file for the first run
         if (!fs.existsSync(path.dirname(pwFile))) {
             fs.mkdirSync(path.dirname(pwFile))
-            // fs.writeFileSync(pwFile, "[]", { encoding: 'utf-8' })
+            fs.writeFileSync(pwFile, pwTemplate, { encoding: 'utf-8' })
         }
 
         const passwords = db.get('passwords').value()
-        const decrypted = passwords.map((o: any) => {
+        this.passwords = passwords.map((o: any) => {
             const tempObj = { ...o }
             tempObj.password = this.decrypt(o.password)
             return tempObj
         })
-        console.log(decrypted)
-        this.passwords = [ ...decrypted]
     }
 
     private encrypt (cleanString: string) {
@@ -72,9 +71,9 @@ class PasswordAPI {
         alias = alias  || ''
         login = login || ''
         const found = this.passwords.find(o => o.alias === alias)
-        if (found) { alias += '-' + randomize('a', 3) }
+        if (found) { alias += randomize('a', 3) }
         const newPassword : Password = { 
-            id: randomize('aA0', 16),
+            id: randomize('aA0', 32),
             email, 
             password: this.encrypt(password),
             alias,
@@ -89,13 +88,6 @@ class PasswordAPI {
 
     list () {
         return this.passwords
-            /*
-        return this.passwords.map((o: any) => {
-            const tempObj = { ...o }
-            tempObj.password = this.decrypt(o.password)
-            return tempObj
-        })
-             */
     }
 
     findByIndex(index : number) {

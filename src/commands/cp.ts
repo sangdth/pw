@@ -13,12 +13,11 @@ export default class Copy extends Command {
     static flags = {
         index: flags.string({ char: 'i' }),
         alias: flags.string({ char: 'a' }),
-        email: flags.string({ char: 'e' }),
     }
 
     async run() {
         const { flags } = this.parse(Copy)
-        let { index, alias, email } = flags
+        let { index, alias } = flags
 
         if (alias) {
             const table = new Table({
