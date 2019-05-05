@@ -9,11 +9,7 @@ interface Password {
 }
 declare class PasswordAPI {
     private passwords;
-    private iv;
-    private masterPass;
-    private salt;
     constructor();
-    private savePasswords;
     private encrypt;
     private decrypt;
     add(email: string, password: string, alias?: string, login?: string): void;
