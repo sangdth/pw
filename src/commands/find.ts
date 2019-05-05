@@ -26,12 +26,18 @@ export default class Find extends Command {
                 chalk.blueBright.bold('Password'),
               ]
         })
-        const passwords = passwordAPI.list()
+
+        const passwords = passwordAPI.list().map((o: any) => {
+            o.password = '*'.repeat(16)
+            return o
+        })
+
         if (index) {
             const found = passwordAPI.findByIndex(parseInt(index, 10))
             table.push([0, found.alias, found.login, found.email, found.password])
             this.log(table.toString())
         }
+
         if (alias) {
             const passwords = passwordAPI.findByAlias(alias)
             for (let i = 0; i < passwords.length; i++) {
@@ -40,6 +46,7 @@ export default class Find extends Command {
             }
             this.log(table.toString())
         }
+
         if (email) {
             const passwords = passwordAPI.findByEmail(email)
             for (let i = 0; i < passwords.length; i++) {

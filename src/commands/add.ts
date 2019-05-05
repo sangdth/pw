@@ -37,9 +37,9 @@ export default class Add extends Command {
                     type: 'password',
                     mask: '*',
                     message: 'Enter password',
-                    when: (a: any) => {
-                        if (a.auto) {
-                            a.password = randomize('aA!', 16)
+                    when: (answer: any) => {
+                        if (answer.auto) {
+                            answer.password = randomize('aA0!', 16)
                             return false
                         }
                         return true
