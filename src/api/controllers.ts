@@ -117,6 +117,9 @@ class PasswordAPI {
 
     removeByAlias(alias : string) {
       this.passwords.splice(this.passwords.findIndex(e => e.alias === alias), 1);
+      db.get('passwords')
+        .remove({ alias })
+        .write();
     }
 }
 

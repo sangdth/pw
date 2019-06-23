@@ -1,11 +1,16 @@
-import { Command, flags } from '@oclif/command';
+import Command, { flags } from '@oclif/command';
 export default class Remove extends Command {
     static description: string;
     static aliases: string[];
+    static args: {
+        name: string;
+        required: boolean;
+        description: string;
+        hidden: boolean;
+    }[];
     static flags: {
         index: flags.IOptionFlag<string | undefined>;
         alias: flags.IOptionFlag<string | undefined>;
-        email: flags.IOptionFlag<string | undefined>;
     };
     run(): Promise<void>;
 }
