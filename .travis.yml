@@ -7,5 +7,4 @@ cache: npm
 script:
   - .\bin\run --version
   - .\bin\run --help
-  - npm run test
-
+# - npm run test
