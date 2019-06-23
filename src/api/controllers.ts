@@ -1,9 +1,13 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import * as os from 'os';
-import * as crypto from 'crypto';
-import * as inquirer from 'inquirer';
-import chalk from 'chalk';
+// import * as os from 'os';
+import {
+  scryptSync,
+  createCipheriv,
+  createDecipheriv,
+} from 'crypto';
+// import * as inquirer from 'inquirer';
+// import chalk from 'chalk';
 import { getPath } from '../lib/util/path';
 
 const randomize = require('randomatic');
@@ -16,7 +20,7 @@ const pwTemplate = '{ "passwords": [] }';
 const masterPass = 'lorem_pass';
 const iv = Buffer.alloc(16, 0); // make it dynamic later
 const salt = 'random_salt';
-const key = crypto.scryptSync(masterPass, salt, 24);
+const key = scryptSync(masterPass, salt, 24);
 
 const adapter = new FileSync(pwFile, {
   // run on write
@@ -25,7 +29,6 @@ const adapter = new FileSync(pwFile, {
   // deserialize: (str: string) => decrypt(str)
 });
 const db = low(adapter);
-
 
 interface Password {
     id: string
@@ -56,14 +59,14 @@ class PasswordAPI {
     }
 
     private encrypt(cleanString: string) {
-      const cipher = crypto.createCipheriv('aes192', key, iv);
+      const cipher = createCipheriv('aes192', key, iv);
       let encrypted = cipher.update(cleanString, 'utf8', 'hex');
       encrypted += cipher.final('hex');
       return encrypted;
     }
 
     private decrypt(encryptedString: string) {
-      const decipher = crypto.createDecipheriv('aes192', key, iv);
+      const decipher = createDecipheriv('aes192', key, iv);
       let decrypted = decipher.update(encryptedString, 'hex', 'utf8');
       decrypted += decipher.final('utf8');
       return decrypted;

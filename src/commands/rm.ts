@@ -1,7 +1,7 @@
 import { Command, flags } from '@oclif/command'
 import chalk from 'chalk'
-import * as inquirer from 'inquirer'
-const Table  = require('cli-table')
+import { prompt } from 'inquirer'
+import Table from 'cli-table';
 import passwordAPI from '../api/controllers'
 
 export default class Remove extends Command {
@@ -22,7 +22,7 @@ export default class Remove extends Command {
         if (index) {
             const arr = index.split(',')
             if (arr.length >= 1) {
-                let answers: any = await inquirer.prompt([{
+                let answers: any = await prompt([{
                     type: 'confirm',
                     name: 'confirm',
                     message: (a: any) => 'Permanently delete those indexes. Are you sure?',
@@ -59,12 +59,12 @@ export default class Remove extends Command {
 
             if (passwords.length >= 2) {
                 this.log(table.toString())
-                let answers: any = await inquirer.prompt([
+                let answers: any = await prompt([
                     { name: 'position', type: 'input', message: 'Select item to remove' },
                     {
                         name: 'confirm',
                         type: 'confirm',
-                        message: (a: any) => `Permanent delete ${chalk.blue.bold(passwords[a.position].alias)}. Are you sure?`,
+                        message: (a: any) => `Permanent delete ${chalk.red.bold(passwords[a.position].alias)}. Are you sure?`,
                         default: false,
                     },
                 ])
@@ -75,11 +75,11 @@ export default class Remove extends Command {
                 }
             }
             if (passwords.length === 1) {
-                let answers: any = await inquirer.prompt([
+                let answers: any = await prompt([
                     {
                         type: 'confirm',
                         name: 'confirm',
-                        message: (a: any) => `Permanently delete ${chalk.blue.bold(passwords[0].alias)}. Are you sure?`,
+                        message: (a: any) => `Permanently delete ${chalk.red.bold(passwords[0].alias)}. Are you sure?`,
                         default: false
                     },
                 ])

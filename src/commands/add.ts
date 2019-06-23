@@ -1,8 +1,8 @@
 import { Command, flags } from '@oclif/command'
 // import chalk from 'chalk'
-import * as inquirer from 'inquirer'
-import passwordAPI from '../api/controllers'
+import { prompt } from 'inquirer'
 const randomize = require('randomatic')
+import passwordAPI from '../api/controllers'
 
 export default class Add extends Command {
   static description = 'Add new record'
@@ -27,7 +27,7 @@ export default class Add extends Command {
     // const { length, show } = flags
     // if user does not enter any arg
     if (!login) {
-      let answers: any = await inquirer.prompt(
+      let answers: any = await prompt(
         [
           {
             name: 'alias',

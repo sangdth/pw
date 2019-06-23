@@ -1,4 +1,5 @@
-import {Command, flags} from '@oclif/command'
+import Command, { flags } from '@oclif/command'
+// import cli from 'cli-ux'
 import chalk from 'chalk'
 import { prompt } from 'inquirer'
 import Table from 'cli-table';
@@ -13,9 +14,10 @@ export default class List extends Command {
       show: flags.boolean({char: 's'}),
     }
 
-    async run() {
-      const {flags} = this.parse(List)
-      let {show} = flags
+  async run() {
+  	// cli.action.start('starting a process')
+      const { flags } = this.parse(List)
+      let { show } = flags
 
       const table = new Table({
         head: [
@@ -26,6 +28,7 @@ export default class List extends Command {
           chalk.blueBright.bold('Password'),
         ],
       })
+
       const passwords = passwordAPI.list()
 
       let answers: any
@@ -45,6 +48,7 @@ export default class List extends Command {
         if (!show) item.password = '*'.repeat(16)
         table.push([i, item.alias, item.login, item.email, item.password])
       }
-      this.log(table.toString())
+    // cli.action.stop()
+    this.log(table.toString())
     }
 }
