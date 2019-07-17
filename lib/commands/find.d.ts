@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command';
+import Command, { flags } from '@oclif/command';
 export default class Find extends Command {
     static description: string;
     static aliases: string[];

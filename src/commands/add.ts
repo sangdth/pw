@@ -1,7 +1,8 @@
 import { Command, flags } from '@oclif/command'
 // import chalk from 'chalk'
+import clipboardy from 'clipboardy';
 import { prompt } from 'inquirer'
-const randomize = require('randomatic')
+import randomize from 'randomatic'
 import passwordAPI from '../api/controllers'
 
 export default class Add extends Command {
@@ -9,6 +10,7 @@ export default class Add extends Command {
 
   static aliases = ['create', 'new', 'generate']
 
+  // consider change it to flags
   static args = [
     { name: 'alias' },
     { name: 'login' },
@@ -17,14 +19,13 @@ export default class Add extends Command {
   ]
 
   static flags = {
-    length: flags.string({ char: 'l' }),
-    show: flags.boolean({ char: 's' }),
+    strength: flags.integer({ char: 's' }),
   }
 
   async run() {
     const { args, flags } = this.parse(Add)
     let { alias, login, email, password } = args
-    // const { length, show } = flags
+    const { strength } = flags
     // if user does not enter any arg
     if (!login) {
       let answers: any = await prompt(
@@ -80,7 +81,12 @@ export default class Add extends Command {
     }
 
     if (!password) {
-      password = randomize('aA!', 16)
+      if (strength) {
+        password = randomize('aA!', strength)
+      } else {
+        password = randomize('aA!', 16)
+      }
+      clipboardy.writeSync(password);
     }
     passwordAPI.add(email, password, alias, login)
   }

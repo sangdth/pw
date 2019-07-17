@@ -5,7 +5,7 @@ import Table from 'cli-table';
 import passwordAPI from '../api/controllers'
 
 export default class Remove extends Command {
-  static description = 'Remoe a record'
+  static description = 'Remove a record'
 
   static aliases = ['remove', 'delete', 'del']
 
@@ -90,7 +90,7 @@ export default class Remove extends Command {
             {
               type: 'confirm',
               name: 'confirm',
-              message: (a: any) => `Permanently delete ${chalk.red.bold(passwords[0].alias)}. Are you sure?`,
+              message: () => `Permanently delete ${chalk.red.bold(passwords[0].alias)}. Are you sure?`,
               default: false
             },
           ])

@@ -1,6 +1,6 @@
-import { Command, flags } from '@oclif/command'
+import Command, { flags } from '@oclif/command'
 import chalk from 'chalk'
-const Table  = require('cli-table')
+import Table  from 'cli-table'
 import passwordAPI from '../api/controllers'
 
 export default class Find extends Command {
@@ -14,7 +14,7 @@ export default class Find extends Command {
         email: flags.string({ char: 'e' }),
     }
 
-    async run() {
+  async run() {
         const { flags } = this.parse(Find)
         const { index, alias, email } = flags
         const table = new Table({
@@ -27,33 +27,33 @@ export default class Find extends Command {
               ]
         })
 
-        const passwords = passwordAPI.list().map((o: any) => {
-            o.password = '*'.repeat(16)
-            return o
-        })
+      const passwords = passwordAPI.list().map((o: any) => {
+        o.password = '*'.repeat(16)
+        return o
+      })
 
-        if (index) {
-            const found = passwordAPI.findByIndex(parseInt(index, 10))
-            table.push([0, found.alias, found.login, found.email, found.password])
-            this.log(table.toString())
-        }
+      if (index) {
+        const found = passwordAPI.findByIndex(parseInt(index, 10))
+        table.push([0, found.alias, found.login, found.email, found.password])
+        this.log(table.toString())
+      }
 
-        if (alias) {
-            const passwords = passwordAPI.findByAlias(alias)
-            for (let i = 0; i < passwords.length; i++) {
-                const item = passwords[i]
-                table.push([ i, item.alias, item.login, item.email, item.password ])
-            }
-            this.log(table.toString())
+      if (alias) {
+        const passwords = passwordAPI.findByAlias(alias)
+        for (let i = 0; i < passwords.length; i++) {
+          const item = passwords[i]
+          table.push([ i, item.alias, item.login, item.email, item.password ])
         }
+        this.log(table.toString())
+      }
 
-        if (email) {
-            const passwords = passwordAPI.findByEmail(email)
-            for (let i = 0; i < passwords.length; i++) {
-                const item = passwords[i]
-                table.push([ i, item.alias, item.login, item.email, item.password ])
-            }
-            this.log(table.toString())
+      if (email) {
+        const passwords = passwordAPI.findByEmail(email)
+        for (let i = 0; i < passwords.length; i++) {
+          const item = passwords[i]
+          table.push([ i, item.alias, item.login, item.email, item.password ])
         }
-    }
+        this.log(table.toString())
+      }
+  }
 }

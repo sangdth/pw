@@ -1,4 +1,5 @@
 import Command, { flags } from '@oclif/command'
+// import randomize from 'randomatic'
 // import cli from 'cli-ux'
 import chalk from 'chalk'
 import { prompt } from 'inquirer'
@@ -16,7 +17,7 @@ export default class List extends Command {
 
   async run() {
   	// cli.action.start('starting a process')
-      const { flags } = this.parse(List)
+    const { flags } = this.parse(List)
       let { show } = flags
 
       const table = new Table({

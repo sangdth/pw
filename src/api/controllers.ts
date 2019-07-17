@@ -1,5 +1,9 @@
+import low from 'lowdb';
+import randomize from 'randomatic';
+import FileSync from 'lowdb/adapters/FileSync';
 import * as fs from 'fs-extra';
 import * as path from 'path';
+// import usb from 'usb';
 // import * as os from 'os';
 import {
   scryptSync,
@@ -10,9 +14,8 @@ import {
 // import chalk from 'chalk';
 import { getPath } from '../lib/util/path';
 
-const randomize = require('randomatic');
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
+// const devices = usb.getDeviceList();
+// console.log('devices ', devices.length);
 
 const pwFile = getPath('db.json');
 const pwTemplate = '{ "passwords": [] }';
