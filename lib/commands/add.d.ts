@@ -1,4 +1,4 @@
-import { Command, flags } from '@oclif/command';
+import { Command } from '@oclif/command';
 export default class Add extends Command {
     static description: string;
     static aliases: string[];
@@ -6,8 +6,7 @@ export default class Add extends Command {
         name: string;
     }[];
     static flags: {
-        length: flags.IOptionFlag<string | undefined>;
-        show: import("@oclif/parser/lib/flags").IBooleanFlag<boolean>;
+        strength: import("@oclif/parser/lib/flags").IOptionFlag<number | undefined>;
     };
     run(): Promise<void>;
 }
