@@ -3,10 +3,41 @@
   "description": "Simple password manager",
   "version": "1.0.0-beta-20",
   "author": "Sang Dang @sangdth",
+  "license": "MIT",
+  "repository": "sangdth/pw",
+  "homepage": "https://github.com/sangdth/pw",
+  "bugs": "https://github.com/sangdth/pw/issues",
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "prepare": "tsc -p .",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "pw",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
   "bin": {
     "pw": "./bin/run"
   },
-  "bugs": "https://github.com/sangdth/pw/issues",
+  "keywords": [
+    "oclif"
+  ],
   "dependencies": {
     "@oclif/command": "^1.5.13",
     "@oclif/config": "^1.12.12",
@@ -42,36 +73,5 @@
     "ts-node": "^8.1.0",
     "tslint": "^5.10.0",
     "typescript": "^3.4.5"
-  },
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "files": [
-    "/bin",
-    "/lib",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
-  ],
-  "homepage": "https://github.com/sangdth/pw",
-  "keywords": [
-    "oclif"
-  ],
-  "license": "MIT",
-  "main": "lib/index.js",
-  "oclif": {
-    "commands": "./lib/commands",
-    "bin": "pw",
-    "plugins": [
-      "@oclif/plugin-help"
-    ]
-  },
-  "repository": "sangdth/pw",
-  "scripts": {
-    "postpack": "rm -f oclif.manifest.json",
-    "prepack": "oclif-dev manifest && oclif-dev readme",
-    "prepare": "tsc -p .",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
-  },
-  "types": "lib/index.d.ts"
+  }
 }
