@@ -63,13 +63,13 @@ export default class Copy extends Command {
 
           	if (answers.position) {
             	clipboardy.writeSync(passwords[answers.position].password);
-            	this.log(`Copied ${chalk.green(passwords[answers.position].alias)} into clipboard!`);
+            	this.log(`Copied ${chalk.green(passwords[answers.position].alias)}'s password into clipboard!`);
           	}
         	}
 
         	if (passwords.length === 1) {
           	clipboardy.writeSync(passwords[0].password);
-          	this.log(`Copied ${chalk.green(passwords[0].alias)} into clipboard!`);
+          	this.log(`Copied ${chalk.green(passwords[0].alias)}'s password into clipboard!`);
         	}
 				}
 			}

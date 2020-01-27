@@ -1,32 +1,29 @@
-import * as fs from 'fs-extra'
-import * as os from 'os'
-import * as path from 'path'
+import * as fs from 'fs-extra';
+import * as os from 'os';
+import * as path from 'path';
 
-const xdgConfigPath = (file : any) => {
+const template = '{ "container": [] }';
+
+const options = {
+  encoding: 'utf-8',
+};
+
+export const getPath = (file: string) => {
   const xdgConfigHome = process.env.XDG_CONFIG_HOME
-  // it's undefined on macOS.
-  // TODO: Make the check here, for .config folder.
-  // if not found, try to find .pw-cli
-  // if not found, try to create .pw-cli folder.
+  let pwDir = '';
+  // if user has XDG config foler, use it
   if (xdgConfigHome) {
-    const rcDir = path.join(xdgConfigHome, 'pw-cli')
-    if (!fs.existsSync(rcDir)) {
-      // fs.ensureDirSync(rcDir, 0o700)
-      fs.ensureDirSync(rcDir)
-    }
-    return path.join(rcDir, file)
+    pwDir = path.join(xdgConfigHome, 'pw-cli');
+  // else, use the home directory
+  } else {
+    pwDir = path.join(os.homedir(), '.pw-cli');
   }
-}
-
-// TODO: Check file db.json,
-// if not found, create new file with pre-defined
-// content, with "passwords": []
-const getPath = (file : any) => {
-  return (
-    process.env.PW_PATH ||
-    xdgConfigPath(file) ||
-    path.join(os.homedir(), '.pw-cli', file)
-  )
-}
-
-export { getPath }
+  const pwFile = path.join(pwDir, file);
+  // make sure the folder exist, create it if needed
+  if (!fs.pathExistsSync(pwFile)) {
+    fs.ensureDirSync(pwDir);
+    // create the file, because the it is not exist
+    fs.writeFileSync(pwFile, template, options);
+  }
+  return pwFile;
+};

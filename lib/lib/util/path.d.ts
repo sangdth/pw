@@ -1,2 +1,1 @@
-declare const getPath: (file: any) => string;
-export { getPath };
+export declare const getPath: (file: string) => string;

@@ -1,8 +1,7 @@
+import FileSync from 'lowdb/adapters/FileSync';
+import Fuse from 'fuse.js';
 import low from 'lowdb';
 import randomize from 'randomatic';
-import FileSync from 'lowdb/adapters/FileSync';
-import * as fs from 'fs-extra';
-import * as path from 'path';
 // import usb from 'usb';
 // import * as os from 'os';
 import {
@@ -18,8 +17,6 @@ import { getPath } from '../lib/util/path';
 // console.log('devices ', devices.length);
 
 const pwFile = getPath('db.json');
-const pwTemplate = '{ "passwords": [] }';
-
 const masterPass = 'lorem_pass';
 const iv = Buffer.alloc(16, 0); // make it dynamic later
 const salt = 'random_salt';
@@ -31,34 +28,37 @@ const adapter = new FileSync(pwFile, {
   // run on read
   // deserialize: (str: string) => decrypt(str)
 });
+
 const db = low(adapter);
 
-interface Password {
-    id: string
-    email: string
-    password: string
-    alias: string
-    login: string
-    used: number
-    created: number
-}
-
 class PasswordAPI {
-    private passwords : Password[] = []
+    private passwords: Password[] = []
+
+    private fuse: any
 
     constructor() {
       // make folder and file for the first run
-      if (!fs.existsSync(path.dirname(pwFile))) {
-        fs.mkdirSync(path.dirname(pwFile));
-        fs.writeFileSync(pwFile, pwTemplate, { encoding: 'utf-8' });
-      }
 
-      const passwords = db.get('passwords').value();
-      this.passwords = passwords.map((o: any) => {
-        const tempObj = { ...o };
-        tempObj.password = this.decrypt(o.password);
-        return tempObj;
-      });
+      const results = db.get('container').value();
+
+      this.passwords = results.map((o: any) => ({
+        ...o,
+        password: this.decrypt(o.password),
+      }));
+
+      this.fuse = new Fuse(results, {
+        shouldSort: true,
+        threshold: 0.6,
+        location: 0,
+        distance: 100,
+        maxPatternLength: 32,
+        minMatchCharLength: 2,
+        keys: [
+          "alias",
+          "email",
+          "login",
+        ],
+      })
     }
 
     private encrypt(cleanString: string) {
@@ -80,7 +80,7 @@ class PasswordAPI {
       login = login || '';
       const found = this.passwords.find(o => o.alias === alias);
       if (found) { alias += randomize('a', 3); }
-      const newPassword : Password = {
+      const newPassword: Password = {
         id: randomize('aA0', 32),
         email,
         password: this.encrypt(password),
@@ -89,9 +89,10 @@ class PasswordAPI {
         used: 0,
         created: Date.now(),
       };
-      db.get('passwords')
-        // .push(newPassword)
-        // .write();
+      db.get('container')
+        // @ts-ignore
+        .push(newPassword)
+        .write();
     }
 
     list() {
@@ -114,17 +115,22 @@ class PasswordAPI {
       return this.passwords.filter(e => e.email.toLowerCase().includes(email));
     }
 
+    // provide fuzzy search with input
+    search(input: string) {
+      return this.fuse.search(input) ;
+    }
+
     removeById(id : string) {
       this.passwords.splice(this.passwords.findIndex(e => e.id === id), 1);
     }
 
     removeByAlias(alias : string) {
       this.passwords.splice(this.passwords.findIndex(e => e.alias === alias), 1);
-      db.get('passwords')
-        // .remove({ alias })
-        // .write();
+      db.get('container')
+        // @ts-ignore
+        .remove({ alias })
+        .write();
     }
 }
 
-const api = new PasswordAPI();
-export default api;
+export default new PasswordAPI();

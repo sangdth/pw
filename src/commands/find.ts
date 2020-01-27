@@ -4,18 +4,22 @@ import Table  from 'cli-table'
 import passwordAPI from '../api/controllers'
 
 export default class Find extends Command {
-    static description = 'Get one or more specific passwords'
+  static description = 'Get one or more specific passwords'
 
-    static aliases = ['get', 'select']
+  static aliases = ['get', 'select']
 
-    static flags = {
-        index: flags.string({ char: 'i' }),
-        alias: flags.string({ char: 'a' }),
-        email: flags.string({ char: 'e' }),
-    }
+  static flags = {
+    index: flags.string({ char: 'i' }),
+    alias: flags.string({ char: 'a' }),
+    email: flags.string({ char: 'e' }),
+  }
+
+  static args = [
+    { name: 'input' },
+  ]
 
   async run() {
-        const { flags } = this.parse(Find)
+        const { args: { input }, flags } = this.parse(Find)
         const { index, alias, email } = flags
         const table = new Table({
               head: [
@@ -27,10 +31,12 @@ export default class Find extends Command {
               ]
         })
 
+      /*
       const passwords = passwordAPI.list().map((o: any) => {
         o.password = '*'.repeat(16)
         return o
       })
+      */
 
       if (index) {
         const found = passwordAPI.findByIndex(parseInt(index, 10))
@@ -40,6 +46,7 @@ export default class Find extends Command {
 
       if (alias) {
         const passwords = passwordAPI.findByAlias(alias)
+        console.log({ passwords });
         for (let i = 0; i < passwords.length; i++) {
           const item = passwords[i]
           table.push([ i, item.alias, item.login, item.email, item.password ])
@@ -53,6 +60,17 @@ export default class Find extends Command {
           const item = passwords[i]
           table.push([ i, item.alias, item.login, item.email, item.password ])
         }
+        this.log(table.toString())
+      }
+
+      // TODO: Make sure flags have affect here
+      if (input) {
+        const results = passwordAPI.search(input);
+
+        results.map((o: Password, i: number) => {
+          table.push([i, o.alias, o.login, o.email, `**********${o.password.slice(-4)}`])
+        });
+
         this.log(table.toString())
       }
   }

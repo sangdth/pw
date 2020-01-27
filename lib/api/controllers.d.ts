@@ -1,14 +1,6 @@
-interface Password {
-    id: string;
-    email: string;
-    password: string;
-    alias: string;
-    login: string;
-    used: number;
-    created: number;
-}
 declare class PasswordAPI {
     private passwords;
+    private fuse;
     constructor();
     private encrypt;
     private decrypt;
@@ -18,6 +10,7 @@ declare class PasswordAPI {
     findById(id: string): Password | undefined;
     findByAlias(alias: string): Password[];
     findByEmail(email: string): Password[];
+    search(input: string): any;
     removeById(id: string): void;
     removeByAlias(alias: string): void;
 }

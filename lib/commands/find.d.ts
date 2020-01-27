@@ -7,5 +7,8 @@ export default class Find extends Command {
         alias: flags.IOptionFlag<string | undefined>;
         email: flags.IOptionFlag<string | undefined>;
     };
+    static args: {
+        name: string;
+    }[];
     run(): Promise<void>;
 }

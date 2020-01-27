@@ -32,7 +32,8 @@ export default class List extends Command {
 
       const passwords = passwordAPI.list()
 
-      let answers: any
+      let answers: PromptAnswer
+
       if (show) {
         answers = await prompt([{
           name: 'confirm',
@@ -49,6 +50,7 @@ export default class List extends Command {
         if (!show) item.password = '*'.repeat(16)
         table.push([i, item.alias, item.login, item.email, item.password])
       }
+    // TODO: Make pagination or load more feature, with limit rows
     // cli.action.stop()
     this.log(table.toString())
     }
