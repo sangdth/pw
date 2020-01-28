@@ -8,6 +8,7 @@ interface Password {
   login: string
   used: number
   created: number
+  updated: number
 }
 
 interface PromptAnswer {

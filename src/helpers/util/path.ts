@@ -1,8 +1,14 @@
 import * as fs from 'fs-extra';
 import * as os from 'os';
 import * as path from 'path';
+import randomize from 'randomatic';
 
-const template = '{ "container": [] }';
+const template = {
+  container: [],
+  preferences: {
+    salt: randomize('aA0', 32),
+  },
+};
 
 const options = {
   encoding: 'utf-8',
@@ -23,7 +29,7 @@ export const getPath = (file: string) => {
   if (!fs.pathExistsSync(pwFile)) {
     fs.ensureDirSync(pwDir);
     // create the file, because the it is not exist
-    fs.writeFileSync(pwFile, template, options);
+    fs.writeFileSync(pwFile, JSON.stringify(template), options);
   }
   return pwFile;
 };

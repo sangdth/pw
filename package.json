@@ -10,8 +10,8 @@
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
   "scripts": {
-    "postpack": "rm -f oclif.manifest.json",
-    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "postpack": "rm -f .oclif.manifest.json",
+    "prepack": "rm -rf lib && tsc && oclif-dev manifest",
     "prepare": "tsc -p .",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
@@ -20,16 +20,18 @@
     "node": ">=8.0.0"
   },
   "files": [
+    ".oclif.manifest.json",
     "/bin",
     "/lib",
     "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
+    "/.oclif.manifest.json"
   ],
   "oclif": {
     "commands": "./lib/commands",
     "bin": "pw",
     "plugins": [
-      "@oclif/plugin-help"
+      "@oclif/plugin-help",
+      "@oclif/plugin-warn-if-update-available"
     ]
   },
   "bin": {
@@ -42,6 +44,7 @@
     "@oclif/command": "^1.5.13",
     "@oclif/config": "^1.12.12",
     "@oclif/plugin-help": "^2.1.6",
+    "@oclif/plugin-warn-if-update-available": "^1.7.0",
     "@types/cli-table": "^0.3.0",
     "@types/fs-extra": "^5.0.5",
     "@types/inquirer": "0.0.41",
