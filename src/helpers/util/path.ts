@@ -7,6 +7,7 @@ const template = {
   container: [],
   preferences: {
     salt: randomize('aA0', 32),
+    master: '',
   },
 };
 
@@ -15,7 +16,7 @@ const options = {
 };
 
 export const getPath = (file: string) => {
-  const xdgConfigHome = process.env.XDG_CONFIG_HOME
+  const xdgConfigHome = process.env.XDG_CONFIG_HOME;
   let pwDir = '';
   // if user has XDG config foler, use it
   if (xdgConfigHome) {

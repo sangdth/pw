@@ -1,93 +1,89 @@
-import { Command, flags } from '@oclif/command'
-// import chalk from 'chalk'
+import { Command, flags } from '@oclif/command';
+import chalk from 'chalk';
 import clipboardy from 'clipboardy';
-import { prompt } from 'inquirer'
-import randomize from 'randomatic'
-import passwordAPI from '../api/controllers'
+import { prompt } from 'inquirer';
+import randomize from 'randomatic';
+import passwordAPI from '../api/controllers';
 
 export default class Add extends Command {
-  static description = 'Add new record'
+  static description = 'Add new record';
 
-  static aliases = ['create', 'new', 'generate']
+  static aliases = ['create', 'new', 'generate'];
 
-  // consider change it to flags
   static args = [
-    { name: 'alias' },
-    { name: 'login' },
-    { name: 'email' },
-    { name: 'password' },
-  ]
+    {
+      name: 'alias',
+      required: true,
+      description: 'The alias (name) for password.',
+      hidden: false,
+    },
+  ];
 
   static flags = {
-    strength: flags.integer({ char: 's' }),
-  }
+    auto: flags.boolean({ char: 'a' }),
+  };
 
   async run() {
-    const { args, flags } = this.parse(Add)
-    let { alias, login, email, password } = args
-    const { strength } = flags
+    const {
+      args: { alias },
+      flags: { auto },
+    } = this.parse(Add);
+
+    const input = {
+      alias,
+      login: 'sangdth@gmail.com',
+      email: 'sangdth@gmail.com',
+      password: randomize('aA0!', 16),
+    };
     // if user does not enter any arg
-    if (!login) {
-      let answers: any = await prompt(
+    if (auto) {
+      clipboardy.writeSync(input.password);
+      passwordAPI.add({ ...input });
+    } else {
+      const answers = await prompt(
         [
           {
             name: 'alias',
             type: 'input',
             message: 'Enter alias',
-            default: alias || ''
+            default: alias,
           },
           {
             name: 'login',
             type: 'input',
             message: 'Enter login',
-            default: 'sangdth@gmail.com'
+            default: 'sangdth@gmail.com',
           },
           {
-            name: 'email', 
-            type: 'input', 
+            name: 'email',
+            type: 'input',
             message: 'Enter email',
-            default: (a: any) => a.login
+            default: (a: any) => a.login,
           },
           {
             name: 'auto',
             type: 'confirm',
             message: 'Auto generate password?',
-            default: true
+            default: true,
           },
-          { 
+          {
             name: 'password',
             type: 'password',
             mask: '*',
             message: 'Enter password',
-            when: (answer: any) => {
-              if (answer.auto) {
-                answer.password = randomize('aA0!', 16)
-                return false
+            when: (current: any) => {
+              if (current.auto) {
+                return false;
               }
-              return true
-            }
-          }
-        ]
-      )
-
-      alias = answers.alias
-      email = answers.email
-      login = answers.login
-      password = answers.password
-    }
-
-    if (!email) {
-      email = login
-    }
-
-    if (!password) {
-      if (strength) {
-        password = randomize('aA!', strength)
-      } else {
-        password = randomize('aA!', 16)
-      }
+              return true;
+            },
+          },
+        ],
+      );
+      const password = answers.auto ? input.password : answers.password;
       clipboardy.writeSync(password);
+      passwordAPI.add({ ...answers, password });
     }
-    passwordAPI.add(email, password, alias, login)
+    this.log(`${chalk.green('Created new item!')}`);
   }
 }

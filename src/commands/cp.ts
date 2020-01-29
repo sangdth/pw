@@ -1,122 +1,72 @@
-import Command, { flags } from '@oclif/command';
-import { prompt } from 'inquirer'
-import chalk from 'chalk';
+import Command from '@oclif/command';
 import Table from 'cli-table';
+import chalk from 'chalk';
 import clipboardy from 'clipboardy';
+import moment from 'moment';
+import { prompt } from 'inquirer';
 import passwordAPI from '../api/controllers';
 
 export default class Copy extends Command {
-  static description = 'Copy a record'
+  static description = 'Copy a record';
 
-  static aliases = ['copy']
+  static aliases = ['copy'];
 
-	static args = [
-		{
-    	name: 'alias',
-    	required: false,
-    	description: 'If flags are omitted, first arg will become alias',
-    	hidden: false,
-    	// parse: input => 'output',
+  static args = [
+    {
+      name: 'alias',
+      required: false,
+      description: 'If flags are omitted, first arg will become alias',
+      hidden: false,
+      // parse: input => 'output',
       // options: ['a', 'b'],
-  	}
-	]
+    },
+  ];
 
-    static flags = {
-      index: flags.string({ char: 'i' }),
-      alias: flags.string({ char: 'a' }),
-    }
+  async run() {
+    const { args: { alias } } = this.parse(Copy);
 
-    async run() {
-      const { args, flags } = this.parse(Copy);
+    if (alias) {
+      const results = passwordAPI.search(alias);
 
-      const table = new Table({
-        head: [
-          chalk.blueBright.bold('#'),
-          chalk.blueBright.bold('Alias'),
-          chalk.blueBright.bold('Login'),
-          chalk.blueBright.bold('Email'),
-          chalk.blueBright.bold('Password'),
-        ],
-      });
+      if (results.length === 1) {
+        const password = passwordAPI.getPassword(results[0].id);
+        clipboardy.writeSync(password);
+        this.log(`Copied ${chalk.green(results[0].alias)}'s password into clipboard!`);
+      } else if (results.length >= 2) {
+        const table = new Table({
+          head: [
+            chalk.blueBright.bold('#'),
+            chalk.blueBright.bold('Alias'),
+            chalk.blueBright.bold('Login'),
+            chalk.blueBright.bold('Email'),
+            chalk.blueBright.bold('Created'),
+          ],
+        });
+        for (let i = 0; i < results.length; i++) {
+          const item = results[i];
+          table.push([i, item.alias, item.login, item.email, moment(item.created).fromNow()]);
+        }
+        this.log(table.toString());
+        const answers: any = await prompt(
+          [
+            {
+              name: 'position',
+              type: 'input',
+              message: 'Select item to copy',
+              default: 0,
+            },
+          ],
+        );
 
-			if (Object.keys(args).length) {
-				const { alias }	 = args;
-				if (alias) {
-        	const passwords = passwordAPI.findByAlias(alias);
-        	for (let i = 0; i < passwords.length; i++) {
-          	const item = passwords[i];
-          	table.push([i, item.alias, item.login, item.email, '*'.repeat(16)]);
-        	}
-					
-        	if (passwords.length >= 2) {
-          	this.log(table.toString());
-          	const answers: any = await prompt(
-            	[
-              	{
-                	name: 'position',
-                	type: 'input',
-                	message: 'Select item to copy',
-                	default: 0,
-              	},
-            	]
-          	);
-
-          	if (answers.position) {
-            	clipboardy.writeSync(passwords[answers.position].password);
-            	this.log(`Copied ${chalk.green(passwords[answers.position].alias)}'s password into clipboard!`);
-          	}
-        	}
-
-        	if (passwords.length === 1) {
-          	clipboardy.writeSync(passwords[0].password);
-          	this.log(`Copied ${chalk.green(passwords[0].alias)}'s password into clipboard!`);
-        	}
-				}
-			}
-
-      if (Object.keys(flags).length) {
-      	const { index, alias } = flags;
-      	if (alias) {
-
-        	const passwords = passwordAPI.findByAlias(alias);
-        	for (let i = 0; i < passwords.length; i++) {
-          	const item = passwords[i];
-          	table.push([i, item.alias, item.login, item.email, '*'.repeat(16)]);
-        	}
-
-        	if (passwords.length >= 2) {
-          	this.log(table.toString());
-          	const answers: any = await prompt(
-            	[
-              	{
-                	name: 'position',
-                	type: 'input',
-                	message: 'Select item to copy',
-                	default: 0,
-              	},
-            	]
-          	);
-
-          	if (answers.position) {
-            	clipboardy.writeSync(passwords[answers.position].password);
-            	this.log(`Copied ${chalk.green(passwords[answers.position].alias)} into clipboard!`);
-          	}
-        	}
-
-        	if (passwords.length === 1) {
-          	clipboardy.writeSync(passwords[0].password);
-          	this.log(`Copied ${chalk.green(passwords[0].alias)} into clipboard!`);
-        	}
-      	}
-
-    	
-
-      	if (index) {
-        	const passwords = passwordAPI.list();
-        	const found = passwords[parseInt(index, 10)];
-        	clipboardy.writeSync(found.password);
-        	this.log(`Copied ${chalk.green(found.alias)} into clipboard!`);
-      	}
+        if (answers.position !== undefined) {
+          const selected = results[answers.position];
+          const password = passwordAPI.getPassword(selected.id);
+          clipboardy.writeSync(password);
+          this.log(`Copied ${chalk.green(selected.alias)}'s password into clipboard!`);
+        }
+      } else {
+        this.log(`Can't find password with alias: ${chalk.green(alias)}`);
       }
     }
+  }
 }

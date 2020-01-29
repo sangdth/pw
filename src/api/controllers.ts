@@ -1,3 +1,4 @@
+// import chalk from 'chalk';
 import FileSync from 'lowdb/adapters/FileSync';
 import Fuse from 'fuse.js';
 import low from 'lowdb';
@@ -20,46 +21,25 @@ const pwFile = getPath('db.json');
 
 const adapter = new FileSync(pwFile, {
   // run on write
-  // serialize: (obj: object) => encrypt(obj),
+  // serialize: (obj: any) => (obj),
   // run on read
-  // deserialize: (str: string) => decrypt(str)
+  // deserialize: (str: string) => (str)
 });
 
 const db = low(adapter);
 const masterPass = 'lorem_pass';
 const salt = db.get('preferences.salt').value();
-const key = scryptSync(masterPass, salt, 32);
 
-class PasswordAPI {
-  private passwords: Password[] = []
-  
-  private fuse: any
+class Controllers {
+  private passwords: Password[] = [];
 
-  constructor() {
-    // make folder and file for the first run
-    const results = db.get('container').value();
-    this.passwords = results.map((o: any) => ({
-      ...o,
-      password: this.decrypt(o.password),
-    }));
-    this.fuse = new Fuse(results, {
-      shouldSort: true,
-      threshold: 0.6,
-      location: 0,
-      distance: 100,
-      maxPatternLength: 32,
-      minMatchCharLength: 2,
-      keys: [
-        "alias",
-        "email",
-        "login",
-      ],
-    })
-  }
+  private key = scryptSync(masterPass, salt, 32);
+
+  private fuse: any;
 
   private encrypt(textInput: string) {
     const iv = randomBytes(16);
-    const cipher = createCipheriv('aes-256-cbc', key, iv);
+    const cipher = createCipheriv('aes-256-cbc', this.key, iv);
     let encrypted = cipher.update(textInput);
     encrypted = Buffer.concat([encrypted, cipher.final()]);
     return `${iv.toString('hex')}:${encrypted.toString('hex')}`;
@@ -69,23 +49,40 @@ class PasswordAPI {
     const textParts = encryptedString.split(':');
     const iv = Buffer.from(textParts[0], 'hex');
     const encrypted = Buffer.from(textParts[1], 'hex');
-    const decipher = createDecipheriv('aes-256-cbc', key, iv);
+    const decipher = createDecipheriv('aes-256-cbc', this.key, iv);
     let decrypted = decipher.update(encrypted);
     decrypted = Buffer.concat([decrypted, decipher.final()]);
     return decrypted.toString();
   }
 
-  add(email : string, password : string, alias? : string, login? : string) {
-    alias = alias || '';
-    login = login || '';
-    const found = this.passwords.find(o => o.alias === alias);
-    if (found) { alias += `-${randomize('a0', 3)}`; }
+  constructor() {
+    // make folder and file for the first run
+    const results = db.get('container').value();
+    this.passwords = results;
+    this.fuse = new Fuse(results, {
+      shouldSort: true,
+      threshold: 0.6,
+      location: 0,
+      distance: 100,
+      maxPatternLength: 32,
+      minMatchCharLength: 2,
+      keys: [
+        'alias',
+        'email',
+        'login',
+      ],
+    });
+  }
+
+  add(input: Input) {
+    const { alias, login, email, password } = input;
+    const found = this.passwords.find((o) => o.alias === alias);
     const newPassword: Password = {
       id: randomize('aA0', 32),
       email,
       password: this.encrypt(password),
-      alias,
-      login,
+      alias: found ? `${alias}-${randomize('a0', 3)}` : alias,
+      login: login || '',
       used: 0,
       created: Date.now(),
       updated: Date.now(),
@@ -94,6 +91,24 @@ class PasswordAPI {
       // @ts-ignore
       .push(newPassword)
       .write();
+  }
+
+  // TODO: session
+  authenticate(code: string) {
+    const existCode = db.get('preferences.master').value();
+    if (!code) { // need to sanitize this input
+      return false;
+    }
+    return this.decrypt(existCode) === code;
+  }
+
+  getPassword(id: string) {
+    const found = this.passwords.find((e) => e.id === id);
+    if (found) {
+      return this.decrypt(found.password);
+    }
+    // console.warn(`${chalk.green('Item not found.')}`);
+    return '';
   }
 
   list() {
@@ -105,28 +120,28 @@ class PasswordAPI {
   }
 
   findById(id : string) {
-    return this.passwords.find(e => e.id === id);
+    return this.passwords.find((e) => e.id === id);
   }
 
   findByAlias(alias : string) {
-    return this.passwords.filter(e => e.alias.toLowerCase().includes(alias));
+    return this.passwords.filter((e) => e.alias.toLowerCase().includes(alias));
   }
 
   findByEmail(email : string) {
-    return this.passwords.filter(e => e.email.toLowerCase().includes(email));
+    return this.passwords.filter((e) => e.email.toLowerCase().includes(email));
   }
 
   // provide fuzzy search with input
   search(input: string) {
-    return this.fuse.search(input) ;
+    return this.fuse.search(input);
   }
 
   removeById(id : string) {
-    this.passwords.splice(this.passwords.findIndex(e => e.id === id), 1);
+    this.passwords.splice(this.passwords.findIndex((e) => e.id === id), 1);
   }
 
   removeByAlias(alias : string) {
-    this.passwords.splice(this.passwords.findIndex(e => e.alias === alias), 1);
+    this.passwords.splice(this.passwords.findIndex((e) => e.alias === alias), 1);
     db.get('container')
       // @ts-ignore
       .remove({ alias })
@@ -134,4 +149,4 @@ class PasswordAPI {
   }
 }
 
-export default new PasswordAPI();
+export default new Controllers();

@@ -10,6 +10,7 @@
   "types": "lib/index.d.ts",
   "main": "lib/index.js",
   "scripts": {
+    "lint": "eslint . --ext .ts",
     "postpack": "rm -f .oclif.manifest.json",
     "prepack": "rm -rf lib && tsc && oclif-dev manifest",
     "prepare": "tsc -p .",
@@ -59,6 +60,7 @@
     "inquirer": "^6.3.1",
     "keytar": "^4.11.0",
     "lowdb": "^1.0.0",
+    "moment": "^2.24.0",
     "randomatic": "^3.1.1",
     "tslib": "^1.9.3",
     "usb": "^1.6.0"
@@ -70,12 +72,19 @@
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
     "@types/node": "^10.14.6",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
     "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^6.3.1",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-oclif": "^0.1.0",
     "globby": "^8.0.2",
     "mocha": "^5.2.0",
     "nyc": "^14.0.0",
     "ts-node": "^8.1.0",
     "tslint": "^5.10.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.7.5"
   }
 }
