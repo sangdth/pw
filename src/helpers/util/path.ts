@@ -8,6 +8,9 @@ const template = {
   preferences: {
     salt: randomize('aA0', 32),
     master: '',
+    email: '',
+    login: '',
+    name: '',
   },
 };
 
@@ -15,7 +18,7 @@ const options = {
   encoding: 'utf-8',
 };
 
-export const getPath = (file: string) => {
+export default (file: string) => {
   const xdgConfigHome = process.env.XDG_CONFIG_HOME;
   let pwDir = '';
   // if user has XDG config foler, use it

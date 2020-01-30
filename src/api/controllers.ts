@@ -1,10 +1,6 @@
 // import chalk from 'chalk';
-import FileSync from 'lowdb/adapters/FileSync';
 import Fuse from 'fuse.js';
-import low from 'lowdb';
 import randomize from 'randomatic';
-// import usb from 'usb';
-// import * as os from 'os';
 import {
   createCipheriv,
   createDecipheriv,
@@ -13,29 +9,22 @@ import {
 } from 'crypto';
 // import * as inquirer from 'inquirer';
 // import chalk from 'chalk';
-import { getPath } from '../helpers/util/path';
+import {
+  addPassword,
+  deletePassword,
+  getPasswords,
+  getPreferences,
+} from './database';
 
-// const devices = usb.getDeviceList();
-// console.log('devices ', devices.length);
-const pwFile = getPath('db.json');
-
-const adapter = new FileSync(pwFile, {
-  // run on write
-  // serialize: (obj: any) => (obj),
-  // run on read
-  // deserialize: (str: string) => (str)
-});
-
-const db = low(adapter);
 const masterPass = 'lorem_pass';
-const salt = db.get('preferences.salt').value();
+const { salt } = getPreferences();
 
 class Controllers {
   private passwords: Password[] = [];
 
   private key = scryptSync(masterPass, salt, 32);
 
-  private fuse: any;
+  private fuse: any; // TODO: make type for this
 
   private encrypt(textInput: string) {
     const iv = randomBytes(16);
@@ -56,8 +45,7 @@ class Controllers {
   }
 
   constructor() {
-    // make folder and file for the first run
-    const results = db.get('container').value();
+    const results = getPasswords();
     this.passwords = results;
     this.fuse = new Fuse(results, {
       shouldSort: true,
@@ -87,19 +75,16 @@ class Controllers {
       created: Date.now(),
       updated: Date.now(),
     };
-    db.get('container')
-      // @ts-ignore
-      .push(newPassword)
-      .write();
+    addPassword(newPassword);
   }
 
   // TODO: session
   authenticate(code: string) {
-    const existCode = db.get('preferences.master').value();
-    if (!code) { // need to sanitize this input
+    const { secret } = getPreferences();
+    if (!secret) { // need to sanitize this input
       return false;
     }
-    return this.decrypt(existCode) === code;
+    return this.decrypt(secret) === code;
   }
 
   getPassword(id: string) {
@@ -115,20 +100,22 @@ class Controllers {
     return this.passwords;
   }
 
-  findByIndex(index : number) {
+  findByIndex(index: number) {
     return this.passwords[index];
   }
 
-  findById(id : string) {
+  findById(id: string) {
     return this.passwords.find((e) => e.id === id);
   }
 
-  findByAlias(alias : string) {
-    return this.passwords.filter((e) => e.alias.toLowerCase().includes(alias));
+  findByAlias(alias: string) {
+    return this.passwords
+      .filter((e) => e.alias.toLowerCase().includes(alias.toLowerCase()));
   }
 
-  findByEmail(email : string) {
-    return this.passwords.filter((e) => e.email.toLowerCase().includes(email));
+  findByEmail(email: string) {
+    return this.passwords
+      .filter((e) => e.email.toLowerCase().includes(email.toLowerCase()));
   }
 
   // provide fuzzy search with input
@@ -136,16 +123,22 @@ class Controllers {
     return this.fuse.search(input);
   }
 
-  removeById(id : string) {
-    this.passwords.splice(this.passwords.findIndex((e) => e.id === id), 1);
+  // setup(master: string) {}
+
+  removeById(id: string) {
+    const found = this.findById(id);
+    if (found) {
+      this.passwords.splice(this.passwords.findIndex((e) => e.id === id), 1);
+      deletePassword(id);
+    }
   }
 
-  removeByAlias(alias : string) {
-    this.passwords.splice(this.passwords.findIndex((e) => e.alias === alias), 1);
-    db.get('container')
-      // @ts-ignore
-      .remove({ alias })
-      .write();
+  removeByAlias(alias: string) {
+    const index = this.passwords.findIndex((e) => e.alias === alias);
+    if (index > -1) {
+      const removed = this.passwords.splice(index, 1)[0];
+      deletePassword(removed.id);
+    }
   }
 }
 

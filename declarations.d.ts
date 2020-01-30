@@ -21,3 +21,11 @@ interface Input {
   alias: string
   login: string
 }
+
+interface Preferences {
+  salt?: string
+  master?: string
+  email?: string
+  login?: string
+  name?: string
+}
