@@ -12,7 +12,14 @@ Simple password manager
 <p align="center"><img src="/img/demo.gif?raw=true"/></p>
 
 
-#### Warning! Use with your own risk! This is learning project, and still in development, passwords are not saved in raw text, but simple encrypted with static pass and salt. In the future I will try to make it stronger and more flexible.
+#### Warning! Use with your own risk! This is [dogfooding](https://www.wikiwand.com/en/Eating_your_own_dog_food) project.
+TODO:
+- [ ] Make authenticate.
+- [ ] Session for each login.
+- [ ] Separate data and preferences.
+- [ ] Release for Homebrew, apt etc.
+- [ ] Sync with mobile device.
+- [ ] Backup/restore.
 
 <!-- toc -->
 * [Usage](#usage)
