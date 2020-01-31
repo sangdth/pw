@@ -11,8 +11,16 @@ Simple password manager
 
 <p align="center"><img src="/img/demo.gif?raw=true"/></p>
 
+# Features:
+- :white_check_mark: All password encrypted.
+- :white_check_mark: Fuzzy search by default (*).
+- :white_check_mark: Typescript supported.
+- :white_check_mark: Auto generate strong password.
+- :white_check_mark: Open source.
 
-#### Warning! Use with your own risk! This is [dogfooding](https://www.wikiwand.com/en/Eating_your_own_dog_food) project.
+(*) If you use the `cp` (copy) command, it will execute the fuzzy search and try to guess the best match for you. E.g. `pw cp goog` will return the `google` result if you had one. In case it has multiple results, a table will be displayed so you can select.
+
+#### Warning:heavy_exclamation_mark: Use with your own risk! This is a [dogfooding](https://www.wikiwand.com/en/Eating_your_own_dog_food) project.
 TODO:
 - [ ] Fix Travis CI.
 - [ ] Make authenticate.
@@ -40,6 +48,9 @@ $ pw init
 
 // Create new password with 'google' alias
 $ pw add google
+
+// Get the 'google' password
+$ pw cp google
 
 // Check version
 $ pw -v
