@@ -32,7 +32,7 @@ $ npm install -g @sangdth/pw
 $ pw COMMAND
 running command...
 $ pw (-v|--version|version)
-@sangdth/pw/1.0.0-beta-40 darwin-x64 node-v12.14.1
+@sangdth/pw/1.0.0-beta-41 darwin-x64 node-v12.14.1
 $ pw --help [COMMAND]
 USAGE
   $ pw COMMAND
@@ -71,7 +71,7 @@ ALIASES
   $ pw generate
 ```
 
-_See code: [src/commands/add.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-41/src/commands/add.ts)_
 
 ## `pw cp [ALIAS]`
 
@@ -88,7 +88,7 @@ ALIASES
   $ pw copy
 ```
 
-_See code: [src/commands/cp.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/cp.ts)_
+_See code: [src/commands/cp.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-41/src/commands/cp.ts)_
 
 ## `pw export`
 
@@ -105,7 +105,7 @@ ALIASES
   $ pw backup
 ```
 
-_See code: [src/commands/export.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/export.ts)_
+_See code: [src/commands/export.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-41/src/commands/export.ts)_
 
 ## `pw find [INPUT]`
 
@@ -125,7 +125,7 @@ ALIASES
   $ pw select
 ```
 
-_See code: [src/commands/find.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/find.ts)_
+_See code: [src/commands/find.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-41/src/commands/find.ts)_
 
 ## `pw help [COMMAND]`
 
@@ -160,7 +160,7 @@ ALIASES
   $ pw la
 ```
 
-_See code: [src/commands/ls.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/ls.ts)_
+_See code: [src/commands/ls.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-41/src/commands/ls.ts)_
 
 ## `pw rm [ALIASES]`
 
@@ -179,7 +179,7 @@ ALIASES
   $ pw del
 ```
 
-_See code: [src/commands/rm.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/rm.ts)_
+_See code: [src/commands/rm.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-41/src/commands/rm.ts)_
 
 ## `pw setup`
 
@@ -194,7 +194,7 @@ ALIASES
   $ pw config
 ```
 
-_See code: [src/commands/setup.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/setup.ts)_
+_See code: [src/commands/setup.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-41/src/commands/setup.ts)_
 
 ## `pw update [CHANNEL]`
 
