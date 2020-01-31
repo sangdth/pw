@@ -1,8 +1,9 @@
 *-debug.log
 *-error.log
+*.tgz
 /.nyc_output
 /dist
 /tmp
 /yarn.lock
-lib
+/lib
 node_modules
