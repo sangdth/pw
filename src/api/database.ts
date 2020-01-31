@@ -27,31 +27,31 @@ export const setPreferences = (newPrefs: Preferences) => {
   return getPreferences();
 };
 
-export const getPasswords = () => db.get('container').value();
+export const getItems = () => db.get('container').value();
 
-export const addPassword = (p: Password) => {
+export const addItem = (p: any) => {
   db.get('container')
     // @ts-ignore
     .push(p)
     .write();
-  return getPasswords();
+  return getItems();
 };
 
-export const updatePassword = (p: Password) => {
+export const updateItem = (p: any) => {
   db.get('container')
     // @ts-ignore
     .find({ id: p.id })
     .assign({ ...p })
     .write();
-  return getPasswords();
+  return getItems();
 };
 
-export const deletePassword = (id: string) => {
+export const deleteItem = (id: string) => {
   db.get('posts')
     // @ts-ignore
     .remove({ id })
     .write();
-  return getPasswords();
+  return getItems();
 };
 
 export default db;

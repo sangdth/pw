@@ -7,7 +7,7 @@ const template = {
   container: [],
   preferences: {
     salt: randomize('aA0', 32),
-    master: '',
+    secret: randomize('aA0', 64),
     email: '',
     login: '',
     name: '',

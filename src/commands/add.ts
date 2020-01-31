@@ -1,9 +1,10 @@
-import { Command, flags } from '@oclif/command';
 import chalk from 'chalk';
 import clipboardy from 'clipboardy';
-import { prompt } from 'inquirer';
 import randomize from 'randomatic';
+import { Command, flags } from '@oclif/command';
+import { prompt } from 'inquirer';
 import passwordAPI from '../api/controllers';
+import { getPreferences } from '../api/database';
 
 export default class Add extends Command {
   static description = 'Add new record';
@@ -29,10 +30,12 @@ export default class Add extends Command {
       flags: { auto },
     } = this.parse(Add);
 
+    const { login, email } = getPreferences();
+
     const input = {
       alias,
-      login: 'sangdth@gmail.com',
-      email: 'sangdth@gmail.com',
+      login,
+      email,
       password: randomize('aA0!', 16),
     };
     // if user does not enter any arg
@@ -49,16 +52,16 @@ export default class Add extends Command {
             default: alias,
           },
           {
-            name: 'login',
-            type: 'input',
-            message: 'Enter login',
-            default: 'sangdth@gmail.com',
-          },
-          {
             name: 'email',
             type: 'input',
             message: 'Enter email',
-            default: (a: any) => a.login,
+            default: email,
+          },
+          {
+            name: 'login',
+            type: 'input',
+            message: 'Enter login',
+            default: (a: any) => login || a.email.split('@')[0],
           },
           {
             name: 'auto',

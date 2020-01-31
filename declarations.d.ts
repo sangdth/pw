@@ -24,7 +24,7 @@ interface Input {
 
 interface Preferences {
   salt?: string
-  master?: string
+  secret?: string
   email?: string
   login?: string
   name?: string

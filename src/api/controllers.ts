@@ -10,19 +10,18 @@ import {
 // import * as inquirer from 'inquirer';
 // import chalk from 'chalk';
 import {
-  addPassword,
-  deletePassword,
-  getPasswords,
+  addItem,
+  deleteItem,
+  getItems,
   getPreferences,
 } from './database';
 
-const masterPass = 'lorem_pass';
-const { salt } = getPreferences();
+const { salt, secret } = getPreferences();
 
 class Controllers {
   private passwords: Password[] = [];
 
-  private key = scryptSync(masterPass, salt, 32);
+  private key = scryptSync(secret, salt, 32);
 
   private fuse: any; // TODO: make type for this
 
@@ -45,7 +44,7 @@ class Controllers {
   }
 
   constructor() {
-    const results = getPasswords();
+    const results = getItems();
     this.passwords = results;
     this.fuse = new Fuse(results, {
       shouldSort: true,
@@ -75,17 +74,12 @@ class Controllers {
       created: Date.now(),
       updated: Date.now(),
     };
-    addPassword(newPassword);
+    addItem(newPassword);
   }
 
-  // TODO: session
-  authenticate(code: string) {
-    const { secret } = getPreferences();
-    if (!secret) { // need to sanitize this input
-      return false;
-    }
-    return this.decrypt(secret) === code;
-  }
+  // TODO: authenticate and session
+  // authenticate(code: string) {
+  // }
 
   getPassword(id: string) {
     const found = this.passwords.find((e) => e.id === id);
@@ -129,7 +123,7 @@ class Controllers {
     const found = this.findById(id);
     if (found) {
       this.passwords.splice(this.passwords.findIndex((e) => e.id === id), 1);
-      deletePassword(id);
+      deleteItem(id);
     }
   }
 
@@ -137,7 +131,7 @@ class Controllers {
     const index = this.passwords.findIndex((e) => e.alias === alias);
     if (index > -1) {
       const removed = this.passwords.splice(index, 1)[0];
-      deletePassword(removed.id);
+      deleteItem(removed.id);
     }
   }
 }
