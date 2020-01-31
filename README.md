@@ -14,6 +14,7 @@ Simple password manager
 
 #### Warning! Use with your own risk! This is [dogfooding](https://www.wikiwand.com/en/Eating_your_own_dog_food) project.
 TODO:
+- [ ] Fix Travis CI.
 - [ ] Make authenticate.
 - [ ] Session for each login.
 - [ ] Separate data and preferences.
