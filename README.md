@@ -25,7 +25,7 @@ $ npm install -g @sangdth/pw
 $ pw COMMAND
 running command...
 $ pw (-v|--version|version)
-@sangdth/pw/1.0.0-beta-30 darwin-x64 node-v12.14.1
+@sangdth/pw/1.0.0-beta-40 darwin-x64 node-v12.14.1
 $ pw --help [COMMAND]
 USAGE
   $ pw COMMAND
@@ -40,8 +40,9 @@ USAGE
 * [`pw find [INPUT]`](#pw-find-input)
 * [`pw help [COMMAND]`](#pw-help-command)
 * [`pw ls`](#pw-ls)
-* [`pw rm [ALIAS]`](#pw-rm-alias)
+* [`pw rm [ALIASES]`](#pw-rm-aliases)
 * [`pw setup`](#pw-setup)
+* [`pw update [CHANNEL]`](#pw-update-channel)
 
 ## `pw add ALIAS`
 
@@ -63,7 +64,7 @@ ALIASES
   $ pw generate
 ```
 
-_See code: [src/commands/add.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-30/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/add.ts)_
 
 ## `pw cp [ALIAS]`
 
@@ -80,7 +81,7 @@ ALIASES
   $ pw copy
 ```
 
-_See code: [src/commands/cp.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-30/src/commands/cp.ts)_
+_See code: [src/commands/cp.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/cp.ts)_
 
 ## `pw export`
 
@@ -97,7 +98,7 @@ ALIASES
   $ pw backup
 ```
 
-_See code: [src/commands/export.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-30/src/commands/export.ts)_
+_See code: [src/commands/export.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/export.ts)_
 
 ## `pw find [INPUT]`
 
@@ -117,7 +118,7 @@ ALIASES
   $ pw select
 ```
 
-_See code: [src/commands/find.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-30/src/commands/find.ts)_
+_See code: [src/commands/find.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/find.ts)_
 
 ## `pw help [COMMAND]`
 
@@ -152,22 +153,18 @@ ALIASES
   $ pw la
 ```
 
-_See code: [src/commands/ls.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-30/src/commands/ls.ts)_
+_See code: [src/commands/ls.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/ls.ts)_
 
-## `pw rm [ALIAS]`
+## `pw rm [ALIASES]`
 
 Remove a record
 
 ```
 USAGE
-  $ pw rm [ALIAS]
+  $ pw rm [ALIASES]
 
 ARGUMENTS
-  ALIAS  If flags are omitted, first arg will become alias
-
-OPTIONS
-  -a, --alias=alias
-  -i, --index=index
+  ALIASES  The alias of password item, you can use comma-separated.
 
 ALIASES
   $ pw remove
@@ -175,7 +172,7 @@ ALIASES
   $ pw del
 ```
 
-_See code: [src/commands/rm.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-30/src/commands/rm.ts)_
+_See code: [src/commands/rm.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/rm.ts)_
 
 ## `pw setup`
 
@@ -190,5 +187,16 @@ ALIASES
   $ pw config
 ```
 
-_See code: [src/commands/setup.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-30/src/commands/setup.ts)_
+_See code: [src/commands/setup.ts](https://github.com/sangdth/pw/blob/v1.0.0-beta-40/src/commands/setup.ts)_
+
+## `pw update [CHANNEL]`
+
+update the pw CLI
+
+```
+USAGE
+  $ pw update [CHANNEL]
+```
+
+_See code: [@oclif/plugin-update](https://github.com/oclif/plugin-update/blob/v1.3.9/src/commands/update.ts)_
 <!-- commandsstop -->
