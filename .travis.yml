@@ -2,9 +2,11 @@ language: node_js
 node_js:
   - node
 
-cache: npm
+cache: yarn
 
 script:
-  - .\bin\run --version
-  - .\bin\run --help
+  yarn lint
+  # yarn test
+  # - .\bin\run --version
+  # - .\bin\run --help
 # - npm run test

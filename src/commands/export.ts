@@ -42,10 +42,6 @@ export default class Export extends Command {
     const ids = answer.deviceIds.split(':');
     const selected = usb.findByIds(ids[0], ids[1]);
     selected.open();
-    console.log(selected.getCapabilities((err, cap) => {
-      console.log(cap);
-    }));
-    // TODO: Make pagination or load more feature, with limit rows
     this.log('Done.');
   }
 }

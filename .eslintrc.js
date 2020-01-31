@@ -16,6 +16,7 @@ module.exports = {
   env: {
     node: true,
   },
+  ignorePatterns: ['/bin', '/lib', '/test'],
   rules: {
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
