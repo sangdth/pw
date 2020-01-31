@@ -21,7 +21,7 @@ TODO:
 - [ ] Sync with mobile device.
 - [ ] Backup/restore.
 
-# pw
+# TOC
 
 <!-- toc -->
 * [Usage](#usage)
