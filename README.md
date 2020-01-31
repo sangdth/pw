@@ -21,28 +21,30 @@ TODO:
 - [ ] Sync with mobile device.
 - [ ] Backup/restore.
 
+# pw
+
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
 <!-- usage -->
 ```sh-session
 // Install
 $ npm install -g @sangdth/pw
+
 // Setup your default information
 $ pw init
+
 // Create new password with 'google' alias
 $ pw add google
+
 // Check version
-$ pw (-v|--version|version)
-@sangdth/pw/1.0.0-beta-41 darwin-x64 node-v12.14.1
-$ pw --help [COMMAND]
-USAGE
-  $ pw COMMAND
-...
+$ pw -v
 ```
 <!-- usagestop -->
+
 # Commands
 <!-- commands -->
 * [`pw add ALIAS`](#pw-add-alias)
