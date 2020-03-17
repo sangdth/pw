@@ -24,11 +24,12 @@ Simple password manager
 TODO:
 - [ ] Fix Travis CI.
 - [ ] Make authenticate.
-- [ ] Session for each login.
+- [ ] Session for login.
 - [ ] Separate data and preferences.
 - [ ] Release for Homebrew, apt etc.
 - [ ] Sync with mobile device.
 - [ ] Backup/restore.
+- [ ] Can remember previous selection.
 
 # TOC
 
